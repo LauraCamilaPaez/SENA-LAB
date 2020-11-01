@@ -57,11 +57,11 @@ Este proyecto está bajo la Licencia (Copyright © 2020-present Camila Páez �
 
 
 ---
-⌨️ con ❤️ por [LauraCamilaPaez](https://github.com/LauraCamilaPaez) 😊
-⌨️ con ❤️ por [1michael4](https://github.com/1michael4) 😊
-⌨️ con ❤️ por [juanc323](https://github.com/juanc323) 😊
-⌨️ con ❤️ por [diegorojas0510](https://github.com/diegorojas0510) 😊
-⌨️ con ❤️ por [jorge1803183](https://github.com/jorge1803183) 😊
+* ⌨️ con ❤️ por [LauraCamilaPaez](https://github.com/LauraCamilaPaez) 😊
+* ⌨️ con ❤️ por [1michael4](https://github.com/1michael4) 😊
+* ⌨️ con ❤️ por [juanc323](https://github.com/juanc323) 😊
+* ⌨️ con ❤️ por [diegorojas0510](https://github.com/diegorojas0510) 😊
+* ⌨️ con ❤️ por [jorge1803183](https://github.com/jorge1803183) 😊
 
 
 
