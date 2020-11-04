@@ -52,11 +52,11 @@
        </div>  
       <div class="inputfield">
           <label>Correo Misena</label>
-          <input type="text" class="input" name="correo" required>
+          <input type="email" class="input" name="correo" required>
        </div> 
       <div class="inputfield">
           <label>Contraseña</label>
-          <input type="text" name="password_user" class="input" required>
+          <input type="password" name="password_user" class="input" required>
        </div> 
         <div class="inputfield">
           <label>Cargo</label>

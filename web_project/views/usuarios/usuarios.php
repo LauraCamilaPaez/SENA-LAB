@@ -21,53 +21,56 @@
                                 </nav>
                             </div>
                 </header>
-<div class="container">
-    <div class="row">
-        <div class="col-md-12">
-            <table class="table">
-                <thead class="thead-dark">
-                    <tr>
-                        <th scope="col">#</th>
-                        <th scope="col">Cargo</th>
-                        <th scope="col">Nombres</th>
-                        <th scope="col">Apellidos</th>
-                        <th scope="col">Correo</th>
-                        <th scope="col">Tipo_documento</th>
-                        <th scope="col">Numero_documento</th>
-                        <th scope="col">C-R-U-D</th>
-                    </tr>
-                </thead>
+    <section>
+        <div class="container-usuarios">
+            <div class="row">
+                <div class="table-responsive">
+                    <table class="table">
+                        <thead class="thead-dark">
+                            <tr>
+                                <th scope="col">#</th>
+                                <th scope="col">Cargo</th>
+                                <th scope="col">Nombres</th>
+                                <th scope="col">Apellidos</th>
+                                <th scope="col">Correo</th>
+                                <th scope="col">Tipo_documento</th>
+                                <th scope="col">Numero_documento</th>
+                                <th scope="col">C-R-U-D</th>
+                            </tr>
+                        </thead>
 
-                <?php
-                    $i=0;
-                    foreach(parent::request() as $r){
-                    $i++;
-                ?>
+                        <?php
+                            $i=0;
+                            foreach(parent::request() as $r){
+                            $i++;
+                        ?>
 
-                <tbody>
-                    <tr>
-                        <th scope="row"><?php echo $r->id_usuario ?></th>
-                        <td><?php echo $r->rol ?></td>
-                        <td><?php echo $r->nombre ?></td>
-                        <td><?php echo $r->apellido ?></td>
-                        <td><?php echo $r->correo ?></td>
-                        <td><?php echo $r->tipo_documento ?></td>
-                        <td><?php echo $r->documento ?></td>
-                        <td>
-                            <div class="btn-group" role="group" aria-label="Basic example">
-                                <a href="?c=Usuarios&m=editar&id=<?php echo $r->id_usuario ?>" class="btn btn-warning btn-sm">Editar</a>
-                                <a href="?c=Admin&m=destroy&id=<?php echo $r->id_usuario ?>" class="btn btn-danger btn-sm">Eliminar</a>
-                            </div>
-                        </td>
-                    </tr>
-                </tbody>
-                <?php } ?>
-            </table>
+                        <tbody>
+                            <tr>
+                                <th scope="row"><?php echo $r->id_usuario ?></th>
+                                <td><?php echo $r->rol ?></td>
+                                <td><?php echo $r->nombre ?></td>
+                                <td><?php echo $r->apellido ?></td>
+                                <td><?php echo $r->correo ?></td>
+                                <td><?php echo $r->tipo_documento ?></td>
+                                <td><?php echo $r->documento ?></td>
+                                <td>
+                                    <div class="btn-group" role="group" aria-label="Basic example">
+                                        <a href="?c=Usuarios&m=editar&id=<?php echo $r->id_usuario ?>" class="btn-warning btn-sm" style="text-decoration: none;">Editar</a>
+                                        <a href="?c=Admin&m=destroy&id=<?php echo $r->id_usuario ?>" class=" btn-danger btn-sm" style="text-decoration: none" >Eliminar</a>
+                                        <a href="?c=Admin&m=create" class="btn-info" style="text-align: center;  text-decoration: none"> <i class="fas fa-plus"></i> Crear usuarios</a>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                        <?php } ?>
+                    </table>
+                </div>
+            </div>
         </div>
-    </div>
-</div>
+    </section>
 
-<a href="?c=Admin&m=create" class="btn btn-info"> <i class="fas fa-plus"></i> Crear usuarios</a>
+
 
 
 
