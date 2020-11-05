@@ -51,7 +51,7 @@
                         <td><?php echo $r->nombre ?></td>
                         <td><?php echo $r->apellido ?></td>
                         <td><?php echo $r->correo ?></td>
-                        <td><?php echo $r->tipo_documento ?></td>
+                        <td><?php echo $r->fk_tipo_documento ?></td>
                         <td><?php echo $r->documento ?></td>
                         <td>
                             <div class="btn-group" role="group" aria-label="Basic example">
