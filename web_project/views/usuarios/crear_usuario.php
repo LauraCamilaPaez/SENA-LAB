@@ -38,10 +38,11 @@
        <div class="inputfield">
         <label>Tipo de Documento</label>
         <div class="custom_select">
-          <select name="tipo_documento">
-            <option value="">Seleccionar Tipo de Documento</option>
-            <option value="cedula de ciudadania">Cédula de Ciudadanía</option>
-            <option value="cedula de extranjeria">Cédula de Extranjería</option>
+          <select name="fk_tipo_documento">
+            <option value="">seleccionar tipo documento</option>
+            <?php foreach(parent::consultartipo_documento() as $r) { ?>
+            <option value="<?php echo $r->id_tipo_documento ?>"><?php echo($r->tipo_documento) ?></option>
+            <?php } ?>
           </select>
         </div>
      </div> 
@@ -68,7 +69,18 @@
               <?php } ?>
             </select>
           </div>
-       </div>  
+       </div>
+       <div class="inputfield">
+          <label>Contrato</label>
+          <div class="custom_select">
+            <select name="fk_tipo_contrato" >
+              <option value="">Seleccionar Contrato</option>
+              <?php foreach(parent::consultartipo_contrato() as $r) { ?>
+                <option value="<?php echo $r->id_tipo_contrato ?>"><?php echo( $r->tipo_contrato)?></option>
+              <?php } ?>
+            </select>
+          </div>
+       </div>   
 
 
       <div class="inputfield">
@@ -79,3 +91,6 @@
 	
 </body>
 </html>
+
+
+
