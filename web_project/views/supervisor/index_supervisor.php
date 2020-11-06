@@ -60,10 +60,8 @@
         </div>
     </section>
     
-    <footer class="footer">
-        <p>Todos los derechos reservados a Sena-lab</p>
-        <p class=" "> Copyright © 2020 </p>            
-    </footer>
+    
+
 
 </body>
 </html>
