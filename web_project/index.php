@@ -14,7 +14,6 @@ require_once('core/core.php');
  $c=$c.'controller';
  $objeto= new $c();
  $objeto->$m();
-
  
 
 ?>

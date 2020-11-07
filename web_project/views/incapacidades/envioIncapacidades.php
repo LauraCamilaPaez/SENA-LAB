@@ -7,13 +7,14 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/all/css/style.css">
+    <link rel="shortcut icon" href="assets/img/sena.png">
     <title>Enviar Incapacidad</title>
 </head>
 
 <body>
     <header class="header-nav">
         <div class="container-nav">
-            <a href=""><img src="assets/img/logo-sena.png" alt="Logo Sena" class="logo"></a>
+            <a href=""><img src="assets/img/logosena.png" alt="Logo Sena" class="logo"></a>
             <nav>
                 <ul>
                     <li><a href="?c=Usuarios&m=index">SenaLAB</a></li>

@@ -3,13 +3,29 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" type="text/css" href="assets/all/css/style.css">
+    <link rel="stylesheet" type="text/css" href="assets/all/css/style.css">
+    <link rel="shortcut icon" href="assets/img/sena.png">
 	<link href="https://fonts.googleapis.com/css?family=Poppins:600&display=swap" rel="stylesheet">
 	<script src="https://kit.fontawesome.com/a81368914c.js"></script>
 	<script src="https://kit.fontawesome.com/a81368914c.js"></script>
 	<title>Document</title>
 </head>
 <body>
+
+<header class="header-nav">
+                                <div class="container-nav">
+                                    <a href=""><img src="assets/img/logosena.png" alt="Logo Sena" class="logo"></a>
+                                    <nav>
+                                        <ul>
+                                            <li><a href="index.php">SenaLAB</a></li>
+                                            <li><a href="index.php">Inicio</a></li>
+                                            <li><a href="">Contactanos</a></li>
+                                            <li><a href="?c=Login&m=index">Ingresar</a></li>
+                                        </ul>
+                                    </nav>
+                                </div>
+                    </header>
+<div class="container">
 
 <?php if(@$_REQUEST['error']){ ?>
 <div class="ui stackable container mg-top-10 grid">

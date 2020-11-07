@@ -32,6 +32,7 @@ class LoginController extends Login {
         }else{
             header('location: ?c=Login&m=index&error=error');
         }
+        
     }
 
     public function destroy(){
@@ -41,6 +42,3 @@ class LoginController extends Login {
 
     }
 }
-
-
-?>

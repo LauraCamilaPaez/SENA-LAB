@@ -4,29 +4,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
-    <title>Document</title>
+    <title>Vista Usuario</title>
     <link rel="stylesheet" href="assets/all/css/style.css">
     <link rel="shortcut icon" href="assets/img/sena.png">
 </head>
 <body>
-<header class="header-nav">
-                            <div class="container-nav">
-                                <a href=""><img src="assets/img/logosena.png" alt="Logo Sena" class="logo"></a>
-                                <nav>
-                                    <ul>
-                                        <!--li><a href="#">SenaLAB</a></li-->
-                                        <li><a href="?c=Admin&m=index">Inicio</a></li>
-                                        <li><a href="">Contactanos</a></li>
-                                        <li><a href="?c=Login&m=destroy">Salir</a></li>
-                                    </ul>
-                                </nav>
-                            </div>
-                </header>
+    <header class="header-nav">
+      <div class="container-nav">
+        <a href=""><img src="assets/img/logosena.png" alt="Logo Sena" class="logo"></a>
+        <nav>
+          <ul>
+            <li><a href="#"> SenaLAB</a></li>
+            <li><a href="?c=Supervisor&m=index">Inicio</a></li>
+            <li><a href="#">Contactanos</a></li>
+            <li><a href="?c=Login&m=destroy">Salir</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
 <div class="container">
-<section>
-<div class="row">
-        <div class="col-15 py-3 mx-auto ">
-        
+    <div class="row">
+        <div class="col-md-12">
             <table class="table">
                 <thead class="thead-dark">
                     <tr>
@@ -37,7 +35,6 @@
                         <th scope="col">Correo</th>
                         <th scope="col">Tipo_documento</th>
                         <th scope="col">Numero_documento</th>
-                        <th scope="col">C-R-U-D</th>
                     </tr>
                 </thead>
 
@@ -56,12 +53,6 @@
                         <td><?php echo $r->correo ?></td>
                         <td><?php echo $r->tipo_documento ?></td>
                         <td><?php echo $r->documento ?></td>
-                        <td>
-                            <div class="btn-group" role="group" aria-label="Basic example">
-                                <a href="?c=Usuarios&m=editar&id=<?php echo $r->id_usuario ?>" class="btn btn-warning btn-sm">Editar</a>
-                                <a href="?c=Admin&m=destroy&id=<?php echo $r->id_usuario ?>" class="btn btn-danger btn-sm">Eliminar</a>
-                            </div>
-                        </td>
                     </tr>
                 </tbody>
                 <?php } ?>
@@ -69,9 +60,8 @@
         </div>
     </div>
 </div>
-</section>   
 
-<a href="?c=Admin&m=create" class="btn btn-info"> <i class="fas fa-plus"></i> Crear usuarios</a>
+
 
 
 
