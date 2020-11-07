@@ -32,6 +32,16 @@
             }
         }
 
+        public function consultarincapacidades(){
+			try{
+				$stm=parent::connect()->prepare("SELECT id_incapacidades, nombre, telefono, correo, mensaje, pdf FROM incapacidades ");
+				$stm->execute();
+				return $stm->fetchALL(PDO::FETCH_OBJ);
+			}catch(Exception $e){
+				die($e->getMessage());
+			}
+		}
+
 
 
     }
