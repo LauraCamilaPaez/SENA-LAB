@@ -16,10 +16,10 @@
       }
 
 
-      public function insertar($correo,$descripcion,$pdf){
+      public function insertar($nombre,$telefono,$correo,$mensaje,$pdf){
         try{
 
-          $stm=parent::connect()->prepare("INSERT INTO incapacidades(correo,descripcion,pdf)VALUES('$correo','$descripcion','$pdf')");
+          $stm=parent::connect()->prepare("INSERT INTO incapacidades(nombre, telefono, correo, mensaje, pdf)VALUES('$nombre','$telefono','$correo','$mensaje','$pdf')");
           $stm->execute();
 
         }catch(Exception $e){
