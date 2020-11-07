@@ -71,8 +71,8 @@
                 <label for="mensaje">Mensaje *</label>
                 <textarea id="mensaje" name="mensaje" require></textarea>
 
-                <label for="">Subir incapacidad</label>
-                <input type="file" class="form-control-file" id="exampleFormControlFile1">
+                <label for="pdf">Subir incapacidad</label>
+                <input type="file" class="form-control-file" name="pdf" id="pdf" require>
 
                 <input type="submit" value="Enviar Mensaje" id="btnSend">
             </div>

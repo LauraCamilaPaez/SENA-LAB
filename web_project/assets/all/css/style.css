@@ -342,6 +342,13 @@ a:hover{
 }
 
 /* Register*/
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+}
+
 .wrapper{
   max-width: 500px;
   width: 100%;
@@ -467,6 +474,13 @@ a:hover{
   transform: rotate(-45deg);
   display: none;
 }
+/* .wrapper .form .inputfield .check input[type="checkbox"]:checked ~ .checkmark{
+  background: #4F0601;
+}
+
+.wrapper .form .inputfield .check input[type="checkbox"]:checked ~ .checkmark:before{
+  display: block;
+} */
 
 .wrapper .form .inputfield .btn{
   width: 100%;
@@ -480,6 +494,10 @@ a:hover{
   border-radius: 5px;
   outline: none;
 }
+
+/* .wrapper .form .inputfield .btn:hover{
+  background: #ffd658;
+} */
 
 .wrapper .form .inputfield:last-child{
   margin-bottom: 0;
@@ -536,9 +554,7 @@ a:hover{
   height: 508px;
 }
 
-/*style supervisor index*/
-
-
+/*style supervisor*/
 
 /* formulario ingreso ===================================== */
 
