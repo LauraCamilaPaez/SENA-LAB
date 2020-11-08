@@ -9,26 +9,19 @@
     <link rel="stylesheet" href="assets/all/css/style.css">
 </head>
 <body>
-<nav>
-    <ul class="nav">
-        <li class="nav-item">
-            <a class="nav-link active" style="color: #000000;" href="#">SENA-LAB</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" style="color: #000000;" href="#">Inicio</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" style="color: #000000;" href="#">Administradores</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" style="color: #000000;" href="#">Instructores</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link disabled" style="color: #000000;" href="#">Salir</a>
-        </li>
-    </ul>
-</nav>
-
+    <header class="header-nav">
+      <div class="container-nav">
+        <a href=""><img src="assets/img/logo-sena.png" alt="Logo Sena" class="logo"></a>
+        <nav>
+          <ul>
+            <li><a href="#"> SenaLAB</a></li>
+            <li><a href="?c=Supervisor&m=index">Inicio</a></li>
+            <li><a href="#">Contactanos</a></li>
+            <li><a href="?c=Login&m=destroy">Salir</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
 <head>
     <div class="jumbotron">
         <h1 class="display-4">Hola de nuevo, Supervisor!</h1>
@@ -59,7 +52,23 @@
         </ul>
     </div>
 </section>
-
+    
+      <section>
+        <div class="container">
+          <div class="row">
+            <div class="col-md-4">
+              <button class="btn bis"><a href="?c=Supervisor&m=usuarios">Ver Usuarios</a></button>
+            </div>
+            <div class="col-md-4">
+              <button class="btn bis"><a href="?c=Supervisor&m=incapacidades">Ver Incapacidades</a></button>
+            </div>
+            <div class="col-md-4">
+              <button class="btn bis"><a href="">Ver certificados</a></button>
+            </div>
+          </div>
+        </div>
+    </section>
+    
 
 
 

@@ -15,11 +15,6 @@
         }
       }
 
-
-
-      public function insertar($correo,$descripcion,$pdf){
-        try{
-          $stm=parent::connect()->prepare("INSERT INTO incapacidades(correo,descripcion,pdf)VALUES('$correo','$descripcion','$pdf')");
       public function insertar($nombre,$telefono,$correo,$mensaje,$pdf){
         try{
 
@@ -33,7 +28,7 @@
 
     public function c(){
 			try{
-				$stm=parent::connect()->prepare("SELECT id_incapacidades, nombre,telefono,corree, mensaje, pdf FROM incapacidades ");
+				$stm=parent::connect()->prepare("SELECT id_incapacidades, nombre,telefono,correo, mensaje, pdf FROM incapacidades ");
 				$stm->execute();
 				return $stm->fetchALL(PDO::FETCH_OBJ);
 			}catch(Exception $e){
