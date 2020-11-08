@@ -4,7 +4,7 @@ class Admin extends DB{
 
     public function consultar(){
         try{
-            $stm=parent::connect()->prepare("SELECT id_usuario, fk_rol, nombre, apellido, correo, password_user , tipo_documento, documento");
+            $stm=parent::connect()->prepare("SELECT id_usuario, nombre, apellido, correo, password_user , fk_tipo_documento, documento");
             $stm->execute();
             return $stm->fetchAll(PDO::FETCH_OBJ);
         }catch(Exception $e){
@@ -12,9 +12,9 @@ class Admin extends DB{
         }
     }
 
-    public function insertar($fk_rol, $nombre, $apellido, $correo, $password_user,  $tipo_documento, $documento){
+    public function insertar($fk_rol, $nombre, $apellido, $correo, $password_user,  $fk_tipo_documento, $documento, $fk_tipo_contrato){
         try{
-            $stm = parent::connect()->prepare("INSERT INTO usuario(fk_rol ,nombre,apellido,correo,password_user,tipo_documento,documento) VALUES ('$fk_rol', '$nombre', '$apellido', '$correo', '$password_user',  '$tipo_documento', '$documento') ");
+            $stm = parent::connect()->prepare("INSERT INTO usuario(fk_rol ,nombre,apellido,correo,password_user,fk_tipo_documento,documento,fk_tipo_contrato) VALUES ('$fk_rol', '$nombre', '$apellido', '$correo', '$password_user',  '$fk_tipo_documento', '$documento', '$fk_tipo_contrato') ");
             $stm->execute();
         }catch(Exception $e){
             die($e->getMessage());
@@ -63,7 +63,27 @@ class Admin extends DB{
     }
     public function consultarRol(){
         try{
-            $stm = parent::connect()->prepare("SELECT * FROM rol");
+            $stm = parent::connect()->prepare("SELECT rol");
+            $stm->execute();
+            return $stm->fetchAll(PDO::FETCH_OBJ);
+        }catch(Exception $e){
+            die($e->getMessage());
+        }
+    }
+
+    public function consultartipo_documento(){
+        try{
+            $stm = parent::connect()->prepare("SELECT * FROM tipo_documento");
+            $stm->execute();
+            return $stm->fetchAll(PDO::FETCH_OBJ);
+        }catch(Exception $e){
+            die($e->getMessage());
+        }
+    }
+
+    public function consultartipo_contrato(){
+        try{
+            $stm = parent::connect()->prepare("SELECT * FROM tipo_contrato");
             $stm->execute();
             return $stm->fetchAll(PDO::FETCH_OBJ);
         }catch(Exception $e){
@@ -81,6 +101,16 @@ class Admin extends DB{
             die($e->getMessage());
         }
     }
+
+    public function request(){
+		try{
+			$stm=parent::connect()->prepare("SELECT * FROM usuario INNER JOIN rol ON usuario.fk_rol = rol.id_rol INNER JOIN tipo_documento ON usuario.fk_tipo_documento = tipo_documento.id_tipo_documento");
+			$stm->execute();
+			return $stm->fetchALL(PDO::FETCH_OBJ);
+		}catch(Exception $e){
+			die($e->getMessage());
+		}
+	}
 
 }
 

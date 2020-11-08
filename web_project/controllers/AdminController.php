@@ -17,9 +17,10 @@ class AdminController extends Admin{
 		$apellido = $_POST['apellido'];
 		$correo = $_POST['correo'];
 		$password_user = $_POST['password_user'];
-		$tipo_documento = $_POST['tipo_documento'];
+		$fk_tipo_documento = $_POST['fk_tipo_documento'];
 		$documento = $_POST['documento'];
-		parent::insertar($fk_rol,$nombre,$apellido,$correo,$password_user,$tipo_documento,$documento);
+		$fk_tipo_contrato = $_POST['fk_tipo_contrato'];
+		parent::insertar($fk_rol,$nombre,$apellido,$correo,$password_user,$fk_tipo_documento,$documento,$fk_tipo_contrato);
 		header('location:?c=Usuarios&m=usuarios');
 	}
 
