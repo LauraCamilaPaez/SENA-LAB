@@ -82,12 +82,11 @@
             </div>
         </div>
 
-
-        <div class="inputfield">
-            <input type="submit" value="Registrar" class="btn" >
-    </form>
-</div>
-</div>
+      <div class="inputfield">
+        <button type="submit" value="Registrar" class="btn"></button>
+      </div>
+      </form>
+</div>	
 
 </body>
 </html>
