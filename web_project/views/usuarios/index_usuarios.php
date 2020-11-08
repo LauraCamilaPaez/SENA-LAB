@@ -18,7 +18,7 @@
                                         <li><a href="#">SenaLAB</a></li>
                                         <li><a href="?c=Usuarios&m=index">Inicio</a></li>
                                         <li><a href="">Contactanos</a></li>
-                                        <li><a href="?c=Login&m=destroy">Ingresar</a></li>
+                                        <li><a href="?c=Login&m=destroy">Salir</a></li>
                                     </ul>
                                 </nav>
                             </div>
@@ -27,8 +27,6 @@
 
       
     <div class="d-flex  justify-content-around mar mx-auto">
-        
-       
         <div class="btn-group">
 
             <a href="?m=envio&c=Incapacidades&id=" type="button" class="btn " style="width: 240px; height: 40px;"   aria-haspopup="true" aria-expanded="false">Enviar Incapacidad</a>
@@ -39,10 +37,15 @@
                     <label class="custom-file-label" for="customFileLang">Seleccione archivo</label>
                 </div>
             </div>
-          </div> 
-        <div class="btn-group">    
-            <a href="?c=Certificados&m=index" type="button" class="btn btn-info "  aria-haspopup="true" aria-expanded="false">Certificados</a>      
+          </div>
+
+    <div class="btn-group">    
+            <a href="?c=usuarios&m=inc" type="button" class="btn btn-info "  aria-haspopup="true" aria-expanded="false">incapacidades</a>      
         </div>
+    <div class="btn-group">    
+            <a href="?c=usuarios&m=inc" type="button" class="btn btn-info "  aria-haspopup="true" aria-expanded="false">incapacidades</a>      
+        </div>
+
 
 
  

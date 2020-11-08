@@ -27,39 +27,67 @@
 </header>
 
 <body>
-
-  <head>
-    <div class="jumbotron">
-      <h1 class="display-4">Hola de nuevo, Supervisor!</h1>
-      <p class="lead">En este apartado podrá hacer seguimiento de los usuarios adscritos al Servicio Nacional de Aprendizaje<b>(SENA)</b></p>
-      <!--hr class="my-1">
-      <p>Puedes entrar a este apartado cualquier día y cualquier hora! Solamente con tu Rol: Supervisor y Contraseña.</p-->
-    </div>
-  </head>
-
-
-  <section>
-    <div class="container">
-      <div class="row">
-        <div class="col-md-2">
-          <button class="btn bis"><a href="?c=Supervisor&m=usuarios">Ver Usuarios</a></button>
-        </div>
-        <div class="col-md-2">
-          <button class="btn bis"><a href="?c=Supervisor&m=incapacidades">Ver Incapacidades</a></button>
-        </div>
-        <div class="col-md-2">
-          <button class="btn bis"><a href="">Ver certificados</a></button>
-        </div>
+    <header class="header-nav">
+      <div class="container-nav">
+        <a href=""><img src="assets/img/logo-sena.png" alt="Logo Sena" class="logo"></a>
+        <nav>
+          <ul>
+            <li><a href="#"> SenaLAB</a></li>
+            <li><a href="?c=Supervisor&m=index">Inicio</a></li>
+            <li><a href="#">Contactanos</a></li>
+            <li><a href="?c=Login&m=destroy">Salir</a></li>
+          </ul>
+        </nav>
       </div>
+    </header>
+<head>
+    <div class="jumbotron">
+        <h1 class="display-4">Hola de nuevo, Supervisor!</h1>
+        <p class="lead">En esta parte podrás visualizar lo que hace el Administrador y también lo que hace el Usuario en este caso, los instructores en Servicio Nacional de Aprendizaje <b>SENA</b></p>
+        <hr class="my-4">
+        <p>Puedes entrar a este apartado cualquier día y cualquier hora! Solamente con tu Rol: Supervisor y Contraseña.</p>
     </div>
-  </section>
-  
-  <?php
-  /*=============================================
-    FOOTER
-    =============================================*/
+</head>
 
-  include "views/footer/footer.php";
+<section>
+    <div class="colsv col-md-4">
+        <ul class="list-group">
+            <li class="list-group-item list-group-item-warning" style="color: #000000;">Administrador</li>
+            <li class="list-group-item">Crear Usuarios</li>
+            <li class="list-group-item">Ver Usuarios</li>
+            <li class="list-group-item">Editar Usuarios</li>
+            <li class="list-group-item">Eliminar Usuarios</li>
+        </ul>
+    </div>
+
+    <div class="colsv col-md-4" >
+        <ul class="list-group">
+            <li class="list-group-item list-group-item-success" style="color: #000000;">Usuario</li>
+            <li class="list-group-item ">Editar Perfil</li>
+            <li class="list-group-item">Ver Certificado</li>
+            <li class="list-group-item">Adjuntar Incapacidad</li>
+            <li class="list-group-item">Descargar Certificado</li>
+        </ul>
+    </div>
+</section>
+    
+      <section>
+        <div class="container">
+          <div class="row">
+            <div class="col-md-4">
+              <button class="btn bis"><a href="?c=Supervisor&m=usuarios">Ver Usuarios</a></button>
+            </div>
+            <div class="col-md-4">
+              <button class="btn bis"><a href="?c=Supervisor&m=incapacidades">Ver Incapacidades</a></button>
+            </div>
+            <div class="col-md-4">
+              <button class="btn bis"><a href="">Ver certificados</a></button>
+            </div>
+          </div>
+        </div>
+    </section>
+    
+
 
   echo '</div>';
   ?>

@@ -10,18 +10,18 @@
 </head>
 <body>
 <header class="header-nav">
-                            <div class="container-nav">
-                                <a href=""><img src="assets/img/logosena.png" alt="Logo Sena" class="logo"></a>
-                                <nav>
-                                    <ul>
-                                        <!--li><a href="#">SenaLAB</a></li-->
-                                        <li><a href="?c=Admin&m=index">Inicio</a></li>
-                                        <li><a href="">Contactanos</a></li>
-                                        <li><a href="?c=Login&m=destroy">Salir</a></li>
-                                    </ul>
-                                </nav>
-                            </div>
-                </header>
+    <div class="container-nav">
+        <a href=""><img src="assets/img/logo-sena.png" alt="Logo Sena" class="logo"></a>
+        <nav>
+            <ul>
+                <li><a href="?c=Usuarios&m=index">SenaLAB</a></li>
+                <li><a href="?c=Admin&m=index">Inicio</a></li>
+                <li><a href="">Contactanos</a></li>
+                <li><a href="?c=Login&m=destroy">Salir</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
 <div class="container">
 <section>
 <div class="row">
@@ -29,25 +29,25 @@
         
             <table class="table">
                 <thead class="thead-dark">
-                    <tr>
-                        <th scope="col">#</th>
-                        <th scope="col">Cargo</th>
-                        <th scope="col">Nombres</th>
-                        <th scope="col">Apellidos</th>
-                        <th scope="col">Correo</th>
-                        <th scope="col">Tipo_documento</th>
-                        <th scope="col">Numero_documento</th>
-                        <th scope="col">C-R-U-D</th>
-                    </tr>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Cargo</th>
+                    <th scope="col">Nombres</th>
+                    <th scope="col">Apellidos</th>
+                    <th scope="col">Correo</th>
+                    <th scope="col">Tipo_documento</th>
+                    <th scope="col">Numero_documento</th>
+                    <th scope="col">C-R-U-D</th>
+                </tr>
                 </thead>
 
                 <?php
-                    $i=0;
-                    foreach(parent::request() as $r){
+                $i=0;
+                foreach(parent::request() as $r){
                     $i++;
-                ?>
+                    ?>
 
-                <tbody>
+                    <tbody>
                     <tr>
                         <th scope="row"><?php echo $r->id_usuario ?></th>
                         <td><?php echo $r->rol ?></td>
@@ -63,7 +63,7 @@
                             </div>
                         </td>
                     </tr>
-                </tbody>
+                    </tbody>
                 <?php } ?>
             </table>
         </div>

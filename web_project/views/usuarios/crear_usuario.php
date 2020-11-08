@@ -13,10 +13,10 @@
 <body>
   <header class="header-nav">
     <div class="container-nav">
-      <a href=""><img src="assets/img/logosena.png" alt="Logo Sena" class="logo"></a>
+      <a href=""><img src="assets/img/logo-sena.png" alt="Logo Sena" class="logo"></a>
       <nav>
         <ul>
-          <!--li><a href="?c=Index&m=index">SenaLAB</a></li-->
+          <li><a href="?c=Index&m=index">SenaLAB</a></li>
           <li><a href="?c=Admin&m=index">Inicio</a></li>
           <li><a href="">Contactanos</a></li>
           <li><a href="?c=Login&m=destroy">Ingresar</a></li>
@@ -81,17 +81,22 @@
               <option value="<?php echo $r->id_tipo_contrato ?>"><?php echo ($r->tipo_contrato) ?></option>
             <?php } ?>
           </select>
-          <div class="inputfield">
-              <input type="submit" value="Registrar" class="btn btn-primary" data-toggle="button" aria-pressed="false">
-            </div>
         </div>
       </div>
 
-
-
+      <div class="inputfield">
+        <button type="submit" value="Registrar" class="btn"></button>
+      </div>
     </form>
   </div>
-  </div>
+
+</body>
+
+</html>
+
+</form>
+</div>
+</div>
 
 </body>
 
