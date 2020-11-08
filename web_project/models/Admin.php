@@ -53,7 +53,7 @@ class Admin extends DB{
     }
     public function consultarRol(){
         try{
-            $stm = parent::connect()->prepare("SELECT rol");
+            $stm = parent::connect()->prepare("SELECT * FROM rol");
             $stm->execute();
             return $stm->fetchAll(PDO::FETCH_OBJ);
         }catch(Exception $e){

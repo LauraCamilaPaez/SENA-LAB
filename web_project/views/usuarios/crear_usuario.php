@@ -84,9 +84,9 @@
 
 
       <div class="inputfield">
-        <input type="submit" value="Registrar" class="btn" >
-        </form>
-    </div>
+        <button type="submit" value="Registrar" class="btn"></button>
+      </div>
+      </form>
 </div>	
 	
 </body>
