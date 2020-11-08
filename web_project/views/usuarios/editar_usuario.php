@@ -65,9 +65,8 @@
                     <label>Tipo de Documento</label>
 
                     <div class="custom_select">
-                        <select  name="tipo_documento" required>
-                            <option value="" >Seleccionar Tipo de Documento</option>
-
+                        <select  name="tipo_documento">
+                            <option value="<?php echo $a->tipo_documento ?>" >Seleccionar Tipo de Documento</option>
                             <option value="cedula de ciudadania" >Cédula de Ciudadanía</option>
                             <option value="cedula de extranjeria">Cédula de Extranjería</option>
                         </select>
@@ -81,25 +80,24 @@
 
                 <div class="inputfield">
                     <label>Correo Misena</label>
-                    <input type="email" class="input" name="correo" value="<?php echo $a->correo ?>" required>
+                    <input type="text" class="input" name="correo" value="<?php echo $a->correo ?>" required>
                 </div>
 
                 <div class="inputfield">
                     <label>Contraseña</label>
-                    <input type="password" name="password_user" class="input" value="<?php echo $a->password_user ?>">
+                    <input type="text" name="password_user" class="input" value="<?php echo $a->password_user ?>" readonly >
                 </div>
 
                 <div class="inputfield">
                     <label>Cargo</label>
 
                     <div class="custom_select">
-                        <select name="fk_rol" required >
+                        <select name="fk_rol" >
 
                             <option value="">Seleccionar Cargo</option>
 
                             <?php foreach(parent::consultarRol() as $r) { ?>
-                                <option <?php  echo  $r->id_rol==$a->fk_rol ? 'selected': '' ?>
-                                        value="<?php echo $r->id_rol ?>"><?php echo $r->rol ?></option>
+                                <option value="<?php echo $r->id_rol ?>"><?php echo $r->rol ?></option>
                             <?php } ?>
 
                         </select>
@@ -119,5 +117,4 @@
 
 
 </body>
-</html>
 </html>

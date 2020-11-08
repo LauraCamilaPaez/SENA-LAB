@@ -9,68 +9,65 @@
 </head>
 <body>
 <header class="header-nav">
-                            <div class="container-nav">
-                                <a href=""><img src="assets/img/logo-sena.png" alt="Logo Sena" class="logo"></a>
-                                <nav>
-                                    <ul>
-                                        <li><a href="?c=Usuarios&m=index">SenaLAB</a></li>
-                                        <li><a href="?c=Admin&m=index">Inicio</a></li>
-                                        <li><a href="">Contactanos</a></li>
-                                        <li><a href="?c=Login&m=destroy">Salir</a></li>
-                                    </ul>
-                                </nav>
+    <div class="container-nav">
+        <a href=""><img src="assets/img/logo-sena.png" alt="Logo Sena" class="logo"></a>
+        <nav>
+            <ul>
+                <li><a href="?c=Usuarios&m=index">SenaLAB</a></li>
+                <li><a href="?c=Admin&m=index">Inicio</a></li>
+                <li><a href="">Contactanos</a></li>
+                <li><a href="?c=Login&m=destroy">Salir</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <table class="table">
+                <thead class="thead-dark">
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Cargo</th>
+                    <th scope="col">Nombres</th>
+                    <th scope="col">Apellidos</th>
+                    <th scope="col">Correo</th>
+                    <th scope="col">Tipo_documento</th>
+                    <th scope="col">Numero_documento</th>
+                    <th scope="col">C-R-U-D</th>
+                </tr>
+                </thead>
+
+                <?php
+                $i=0;
+                foreach(parent::request() as $r){
+                    $i++;
+                    ?>
+
+                    <tbody>
+                    <tr>
+                        <th scope="row"><?php echo $r->id_usuario ?></th>
+                        <td><?php echo $r->rol ?></td>
+                        <td><?php echo $r->nombre ?></td>
+                        <td><?php echo $r->apellido ?></td>
+                        <td><?php echo $r->correo ?></td>
+                        <td><?php echo $r->tipo_documento ?></td>
+                        <td><?php echo $r->documento ?></td>
+                        <td>
+                            <div class="btn-group" role="group" aria-label="Basic example">
+                                <a href="?c=Usuarios&m=editar&id=<?php echo $r->id_usuario ?>" class="btn btn-warning btn-sm">Editar</a>
+                                <a href="?c=Admin&m=destroy&id=<?php echo $r->id_usuario ?>" class="btn btn-danger btn-sm">Eliminar</a>
                             </div>
-                </header>
-    <section>
-        <div class="container-usuarios">
-            <div class="row">
-                <div class="table-responsive">
-                    <table class="table">
-                        <thead class="thead-dark">
-                            <tr>
-                                <th scope="col">#</th>
-                                <th scope="col">Cargo</th>
-                                <th scope="col">Nombres</th>
-                                <th scope="col">Apellidos</th>
-                                <th scope="col">Correo</th>
-                                <th scope="col">Tipo_documento</th>
-                                <th scope="col">Numero_documento</th>
-                                <th scope="col">C-R-U-D</th>
-                            </tr>
-                        </thead>
-
-                        <?php
-                            $i=0;
-                            foreach(parent::request() as $r){
-                            $i++;
-                        ?>
-
-                        <tbody>
-                            <tr>
-                                <th scope="row"><?php echo $r->id_usuario ?></th>
-                                <td><?php echo $r->rol ?></td>
-                                <td><?php echo $r->nombre ?></td>
-                                <td><?php echo $r->apellido ?></td>
-                                <td><?php echo $r->correo ?></td>
-                                <td><?php echo $r->tipo_documento ?></td>
-                                <td><?php echo $r->documento ?></td>
-                                <td>
-                                    <div class="btn-group" role="group" aria-label="Basic example">
-                                        <a href="?c=Usuarios&m=editar&id=<?php echo $r->id_usuario ?>" class="btn-warning btn-sm" style="text-decoration: none;">Editar</a>
-                                        <a href="?c=Admin&m=destroy&id=<?php echo $r->id_usuario ?>" class=" btn-danger btn-sm" style="text-decoration: none" >Eliminar</a>
-                                        <a href="?c=Admin&m=create" class="btn-info" style="text-align: center;  text-decoration: none"> <i class="fas fa-plus"></i> Crear usuarios</a>
-                                    </div>
-                                </td>
-                            </tr>
-                        </tbody>
-                        <?php } ?>
-                    </table>
-                </div>
-            </div>
+                        </td>
+                    </tr>
+                    </tbody>
+                <?php } ?>
+            </table>
         </div>
-    </section>
+    </div>
+</div>
 
-
+<a href="?c=Admin&m=create" class="btn btn-info"> <i class="fas fa-plus"></i> Crear usuarios</a>
 
 
 
