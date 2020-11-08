@@ -4,7 +4,7 @@ class Admin extends DB{
 
     public function consultar(){
         try{
-            $stm=parent::connect()->prepare("SELECT id_usuario, nombre, apellido, correo, password_user , fk_tipo_documento, documento");
+            $stm=parent::connect()->prepare("SELECT id_usuario, fk_rol, nombre, apellido, correo, password_user , fk_tipo_documento, documento");
             $stm->execute();
             return $stm->fetchAll(PDO::FETCH_OBJ);
         }catch(Exception $e){
