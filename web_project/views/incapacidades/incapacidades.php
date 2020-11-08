@@ -49,14 +49,7 @@
             </tbody>
           </table>
         </div>
-          
-
-        
-         
-
-
-
-
+     
 
         <footer class="text-center p-3 mb-2 bg-dark text-light">
 
