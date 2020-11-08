@@ -81,13 +81,14 @@
               <option value="<?php echo $r->id_tipo_contrato ?>"><?php echo ($r->tipo_contrato) ?></option>
             <?php } ?>
           </select>
+          <div class="inputfield">
+              <input type="submit" value="Registrar" class="btn btn-primary" data-toggle="button" aria-pressed="false">
+            </div>
         </div>
       </div>
 
 
-      <div class="inputfield">
-        <input type="submit" value="Registrar" class="btn btn-primary" data-toggle="button" aria-pressed="false">
-        
+
     </form>
   </div>
   </div>
