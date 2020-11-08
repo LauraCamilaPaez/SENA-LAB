@@ -69,12 +69,11 @@
 
 
         <div id="navbar-example">
-    <ul class="nav nav-tabs" role="tablist">
-         
-    </ul>
-  </div>
+            <ul class="nav nav-tabs" role="tablist">
 
-
+            </ul>
+        </div>
+        
         <?php
         /*=============================================
         FOOTER

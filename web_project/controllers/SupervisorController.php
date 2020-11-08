@@ -26,7 +26,7 @@ class SupervisorController extends Supervisor{
 		$fk_tipo_documento = $_POST['fk_tipo_documento'];
 		$documento = $_POST['documento'];
 		$fk_tipo_contrato = $_POST['fk_tipo_contrato'];
-		parent::INSERT($fk_rol,$nombre,$apellido,$correo,$password_user,$fk_tipo_documento,$documento,$fk_tipo_contrato);
+		parent::insertar($fk_rol,$nombre,$apellido,$correo,$password_user,$fk_tipo_documento,$documento,$fk_tipo_contrato);
 		header('location:?c=Usuarios&m=usuarios');
 	}
 
