@@ -17,7 +17,7 @@
                                         <li><a href="?c=Usuarios&m=index">SenaLAB</a></li>
                                         <li><a href="?c=Usuarios&m=index">Inicio</a></li>
                                         <li><a href="">Contactanos</a></li>
-                                        <li><a href="?c=Login&m=destroy">Ingresar</a></li>
+                                        <li><a href="?c=Login&m=destroy">Salir</a></li>
                                     </ul>
                                 </nav>
                             </div>
