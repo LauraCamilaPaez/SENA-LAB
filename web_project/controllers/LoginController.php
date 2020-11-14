@@ -32,7 +32,7 @@ class LoginController extends Login {
         
         }else($email == $usuario->correo && $password == $usuario->password_user & $usuario->fk_rol == 3){
             $_SESSION['id_usuario']=$usuario;
-            header('location: ?c=Usuarios&m=index&id=');
+            header('location: ?c=Supervisor&m=index&id=');
         }else{
             header('location: ?c=Login&m=index&error=error');
         }
