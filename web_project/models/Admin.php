@@ -23,11 +23,11 @@ class Admin extends DB{
 
     public function destroyDato($UsuarioID){
         try{
-          $stm=parent::connect()->prepare("DELETE FROM usuario WHERE id_usuario = ?");
-          $stm->bindParam(1,$UsuarioID,PDO::PARAM_INT);
-          $stm->execute();
+            $stm=parent::connect()->prepare("DELETE FROM usuario WHERE id_usuario = ?");
+            $stm->bindParam(1,$UsuarioID,PDO::PARAM_INT);
+            $stm->execute();
         }catch(Exception $e){
-           die($e->getMessage());
+            die($e->getMessage());
         }
     }
 
@@ -90,6 +90,16 @@ class Admin extends DB{
             die($e->getMessage());
         }
     }
+
+    public function request(){
+		try{
+			$stm=parent::connect()->prepare("SELECT * FROM usuario INNER JOIN rol ON usuario.fk_rol = rol.id_rol INNER JOIN tipo_documento ON usuario.fk_tipo_documento = tipo_documento.id_tipo_documento");
+			$stm->execute();
+			return $stm->fetchALL(PDO::FETCH_OBJ);
+		}catch(Exception $e){
+			die($e->getMessage());
+		}
+	}
 
 }
 

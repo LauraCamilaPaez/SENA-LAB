@@ -11,18 +11,18 @@
 <body>
 
     <header class="header-nav">
-                                <div class="container-nav">
-                                    <a href=""><img src="assets/img/logo-sena.png" alt="Logo Sena" class="logo"></a>
-                                    <nav>
-                                        <ul>
-                                            <li><a href="?c=Index&m=index">SenaLAB</a></li>
-                                            <li><a href="?c=Usuarios&m=index">Inicio</a></li>
-                                            <li><a href="">Contactanos</a></li>
-                                            <li><a href="?c=Login&m=index">Ingresar</a></li>
-                                        </ul>
-                                    </nav>
-                                </div>
-                    </header>
+      <div class="container-nav">
+        <a href=""><img src="assets/img/logo-sena.png" alt="Logo Sena" class="logo"></a>
+        <nav>
+          <ul>
+            <li><a href="?c=Index&m=index"> SenaLAB</a></li>
+            <li><a href="?c=Supervisor&m=index">Inicio</a></li>
+            <li><a href="#">Contactanos</a></li>
+            <li><a href="?c=Login&m=destroy">Salir</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
     <div class="container ">
     <div class="container">
        <div class="row">
@@ -38,12 +38,16 @@
             
                     <tr>
                         <th>nombre</th>
-                        <th>descripcion</th>
+                        <th>telefono</th>
+                        <th>correo</th>
+                        <th>mensaje</th>
                         <th>pdf</th>
                     </tr>
-                     <?php  foreach(parent::c()  as $r){    ?>
+                     <?php  foreach(parent::consultarincapacidades()  as $r){    ?>
                   
                     <tr>
+                        <th><?php echo $r->nombre ?></th>
+                        <th><?php echo $r->telefono ?></th>
                         <td><?php echo $r->correo ?></td>
                         <td><?php echo $r->mensaje ?></td>
                         <td><?php echo $r->pdf ?></td>

@@ -5,9 +5,9 @@ class LoginController extends Login {
     private $usuario;
 
     public function index(){
-		require_once('views/index/login.php');
+        require_once('views/index/login.php');
     }
-    
+
     public function __construct(){
         try{
             $this->usuario = new Admin();
@@ -17,10 +17,10 @@ class LoginController extends Login {
     }
 
     public function auth(){
-        
+
         $email = $_POST['email'];
         $password = $_POST['password'];
-        
+
         $usuario = $this->usuario->requestEmail($email, $password);
         if($email == $usuario->correo && $password == $usuario->password_user & $usuario->fk_rol == 2){
             $_SESSION['id_usuario']=$usuario;
