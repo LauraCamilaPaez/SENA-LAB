@@ -10,7 +10,8 @@ class Usuario extends DB{
 		}catch(Exception $e){
 			die($e->getMessage());
 		}
-	}
+    }
+    
 
 	public function consultarRol(){
         try{
