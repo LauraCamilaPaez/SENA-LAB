@@ -15,7 +15,7 @@
                                     <a href=""><img src="assets/img/logo-sena.png" alt="Logo Sena" class="logo"></a>
                                     <nav>
                                         <ul>
-                                            <li><a href="?c=Usuarios&m=index">SenaLAB</a></li>
+                                            <li><a href="?c=Index&m=index">SenaLAB</a></li>
                                             <li><a href="?c=Usuarios&m=index">Inicio</a></li>
                                             <li><a href="">Contactanos</a></li>
                                             <li><a href="?c=Login&m=index">Ingresar</a></li>
@@ -45,7 +45,7 @@
                   
                     <tr>
                         <td><?php echo $r->correo ?></td>
-                        <td><?php echo $r->descripcion ?></td>
+                        <td><?php echo $r->mensaje ?></td>
                         <td><?php echo $r->pdf ?></td>
                     </tr>
      
