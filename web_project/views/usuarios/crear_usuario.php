@@ -57,7 +57,7 @@
         </div>
         <div class="inputfield">
             <label>Contraseña</label>
-            <input type="text" name="password_user" class="input" required>
+            <input type="password" name="password_user" class="input" required>
         </div>
         <div class="inputfield">
             <label>Cargo</label>
@@ -83,7 +83,7 @@
         </div>
 
       <div class="inputfield">
-        <button type="submit" value="Registrar" class="btn"></button>
+        <button type="submit" value="Registrar" class="btn">Registrar</button>
       </div>
       </form>
 </div>	
