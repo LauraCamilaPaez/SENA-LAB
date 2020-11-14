@@ -13,6 +13,10 @@ body{
     background: mintcream;
 }
 
+td{
+    text-transform: capitalize;
+}
+
 /* Fuente*/
 *{
     font-family: 'Roboto', sans-serif;
