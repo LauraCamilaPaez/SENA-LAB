@@ -786,3 +786,24 @@ form.form_contact input[type="submit"]:hover{
     cursor: pointer;
 
 }
+/*Contrato*/
+.botom{
+    position: absolute;
+    margin-top: 150px;
+    top: 8px;
+    margin-left: 20px;
+    font-size: 30px;
+    font-weight: 700;
+    color: #dd0000;
+    max-width: 1000px;
+}
+
+.botom-left{
+    position: absolute;
+    margin-top: 100px;
+    top: 8px;
+    left: 16px;
+    font-weight: 700;
+    color: #000000;
+    font-size: 40px;
+}

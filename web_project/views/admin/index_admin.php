@@ -67,7 +67,7 @@
         </div>
 
         <div class="btn-group espaciobutton">
-            <a href="?c=TipoContrato&m=index" type="button" class="btn btn-info "  aria-haspopup="true" aria-expanded="false">Contrato</a>
+            <a href="?c=Contrato&m=index" type="button" class="btn btn-info "  aria-haspopup="true" aria-expanded="false">Contrato</a>
         </div>
 
 

@@ -62,7 +62,7 @@
             </div>
 
         <div class="btn-group espaciobutton">
-            <a href="?c=Certificados&m=index" type="button" class="btn btn-info "  aria-haspopup="true" aria-expanded="false">Contrato</a>
+            <a href="?c=Contrato&m=index" type="button" class="btn btn-info "  aria-haspopup="true" aria-expanded="false">Contrato</a>
         </div>
     <div class="btn-group">    
             <a href="?c=usuarios&m=inc" type="button" class="btn btn-info "  aria-haspopup="true" aria-expanded="false">incapacidades</a>      
