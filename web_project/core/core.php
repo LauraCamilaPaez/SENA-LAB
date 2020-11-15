@@ -11,6 +11,7 @@ require_once('models/Usuario.php');
 require_once('models/Security.php');
 require_once('models/Supervisor.php');
 require_once('models/TipoContrato.php');
+require_once('models/Contrato.php');
 
 
 ?>
