@@ -8,6 +8,7 @@ class AdminController extends Admin{
     public function create(){
         require_once('views/usuarios/crear_usuario.php');
     }
+    
 
     public function store(){
 

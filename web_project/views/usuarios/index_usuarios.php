@@ -30,8 +30,8 @@
     <section >
         <div class="col-9 py-3 mx-auto  ">
             <div class="card border-success">
-                <div style="background: #5EB319;" class="card-header text-white text-center  pb-4">
-                    Página principal administrador
+                <div style="background: #ffd800;" class="card-header text-white text-center  pb-4">
+                    Página principal usuario
                 </div>
                 <div class="card-body esdiv">
                     <p class="font-weight-bold m-0">Nombre</p>

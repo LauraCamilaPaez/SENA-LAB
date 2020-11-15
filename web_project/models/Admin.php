@@ -12,9 +12,9 @@ class Admin extends DB{
         }
     }
 
-    public function insertar($fk_rol, $nombre, $apellido, $correo, $password_user,  $fk_tipo_documento, $documento, $fk_tipo_contrato){
+    public function insertar($fk_rol, $nombre, $apellido, $correo, $password_user,  $fk_tipo_documento, $documento){
         try{
-            $stm = parent::connect()->prepare("INSERT INTO usuario(fk_rol ,nombre,apellido,correo,password_user,fk_tipo_documento,documento,fk_tipo_contrato) VALUES ('$fk_rol', '$nombre', '$apellido', '$correo', '$password_user',  '$fk_tipo_documento', '$documento', '$fk_tipo_contrato') ");
+            $stm = parent::connect()->prepare("INSERT INTO usuario(fk_rol ,nombre,apellido,correo,password_user,fk_tipo_documento,documento) VALUES ('$fk_rol', '$nombre', '$apellido', '$correo', '$password_user',  '$fk_tipo_documento', '$documento') ");
             $stm->execute();
         }catch(Exception $e){
             die($e->getMessage());
@@ -70,6 +70,8 @@ class Admin extends DB{
             die($e->getMessage());
         }
     }
+
+    
 
     public function consultartipo_contrato(){
         try{

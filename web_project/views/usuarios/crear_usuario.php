@@ -74,18 +74,6 @@
         </div>
       </div>
       <div class="inputfield">
-        <label>Contrato</label>
-        <div class="custom_select">
-          <select name="fk_tipo_contrato">
-            <option value="">Seleccionar Contrato</option>
-            <?php foreach (parent::consultartipo_contrato() as $r) { ?>
-              <option value="<?php echo $r->id_tipo_contrato ?>"><?php echo ($r->tipo_contrato) ?></option>
-            <?php } ?>
-          </select>
-        </div>
-      </div>
-
-      <div class="inputfield">
         <button type="submit" value="Registrar" class="btn">Registrar</button>
       </div>
     </form>

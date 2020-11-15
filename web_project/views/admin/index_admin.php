@@ -62,10 +62,7 @@
         <div class="btn-group espaciobutton">
             <a href="?c=Certificados&m=index" type="button" class="btn btn-info "  aria-haspopup="true" aria-expanded="false">Certificados</a>
         </div>
-
-        <div class="btn-group espaciobutton">
-            <a href="?c=Contrato&m=index" type="button" class="btn btn-info "  aria-haspopup="true" aria-expanded="false">Contrato</a>
-        </div>
+    </div>
 
 
         <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" ></script>

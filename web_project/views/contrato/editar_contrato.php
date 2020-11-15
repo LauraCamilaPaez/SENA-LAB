@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="assets/img/sena.png">
-    <title>Registro Usuarios</title>
+    <title>Editar Contrato</title>
     <link rel="stylesheet" href="assets/all/css/style.css">
     <link rel="shortcut icon" href="assets/img/sena.png">
     <script src="https://kit.fontawesome.com/a81368914c.js"></script>
@@ -18,7 +18,7 @@
                 <li><a href="?c=Index&m=index">SenaLAB</a></li>
                 <li><a href="?c=Admin&m=index">Inicio</a></li>
                 <li><a href="">Contactanos</a></li>
-                <li><a href="?c=Login&m=destroy">Salir</a></li>
+                <li><a href="?c=Usuarios&m=usuarios">Regresar</a></li>
             </ul>
         </nav>
     </div>
@@ -29,21 +29,19 @@
 <div class="wrapper">
 
     <div class="title">
-
-        Formulario de Registro
-
+        Editar Contrato
     </div>
 
-    <form class="form" action="?c=Admin&m=update" method="post">
+    <form class="form" action="?c=Contrato&m=update" method="post">
 
         <?php
         $r = parent::request();
         ?>
 
-        <input type="hidden" value="<?php echo $id ?>" name="id_usuario" class="form-control" readonly >
+        <input type="hidden" value="<?php echo $id ?>" name="id" class="form-control" readonly >
 
         <?php foreach($r as $a){
-            if($id == $a->id_usuario){
+            if($id == $a->id_contrato){
                 ?>
 
                 <div class="inputfield">

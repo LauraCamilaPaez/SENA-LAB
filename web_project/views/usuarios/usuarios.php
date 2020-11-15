@@ -24,7 +24,7 @@
 </header>
 <div class="container-tabla-usuarios">
     <div class="row">
-        <div class="table-responsive-sm">
+        <div class="table-responsive-sm col-md-11">
             <table class="table" style="margin-top: 50px;">
                 <thead class="thead-dark">
                 <tr>
@@ -35,7 +35,8 @@
                     <th scope="col">Correo</th>
                     <th scope="col">Tipo_documento</th>
                     <th scope="col">Numero_documento</th>
-                    <th scope="col">C-R-U-D</th>
+                    <th scope="col">contrato</th>
+                    <th scope="col"><center>C-R-U-D</center></th>
                 </tr>
                 </thead>
 
@@ -54,6 +55,12 @@
                         <td><?php echo $r->correo ?></td>
                         <td><?php echo $r->tipo_documento ?></td>
                         <td><?php echo $r->documento ?></td>
+                        <td>
+                            <div class="btn-group" role="group" aria-label="Basic example">
+                                <a href="?c=Contrato&m=detalles" class="btn-success btn-sm">crear</a>
+                                <a href="?c=Contrato&m=editar&id=<?php echo $r->id_usuario ?>" class=" btn-warning btn-sm">Editar</a>
+                            </div>
+                        </td>
                         <td>
                             <div class="btn-group" role="group" aria-label="Basic example">
                                 <a href="?c=Admin&m=create" class="btn-info btn-sm"> <i class="fas fa-plus"></i> Crear usuarios</a>
