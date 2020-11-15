@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: localhost:3306
--- Tiempo de generación: 08-11-2020 a las 19:44:10
+-- Tiempo de generación: 15-11-2020 a las 17:24:43
 -- Versión del servidor: 10.4.14-MariaDB
 -- Versión de PHP: 7.4.10
 
@@ -18,8 +18,23 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Base de datos: `sena-lab`-Base de datos actual
+-- Base de datos: `sena-lab`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `contrato`
+--
+
+CREATE TABLE `contrato` (
+  `id_contrato` int(11) NOT NULL,
+  `fk_tipo_contrato` int(11) NOT NULL,
+  `fk_usuario` int(11) NOT NULL,
+  `salario` varchar(75) COLLATE utf8_unicode_ci NOT NULL,
+  `fecha_inicio` date NOT NULL,
+  `fecha_terminacion` date NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 -- --------------------------------------------------------
 
@@ -69,9 +84,9 @@ CREATE TABLE `rol` (
 --
 
 INSERT INTO `rol` (`id_rol`, `rol`) VALUES
-(1, 'usuario'),
-(2, 'administrador'),
-(3, 'supervisor');
+(1, 'administrador'),
+(2, 'supervisor'),
+(3, 'usuario');
 
 -- --------------------------------------------------------
 
@@ -91,7 +106,8 @@ CREATE TABLE `tipo_contrato` (
 INSERT INTO `tipo_contrato` (`id_tipo_contrato`, `tipo_contrato`) VALUES
 (1, 'obra labor'),
 (2, 'indefinido'),
-(3, 'fijo');
+(3, 'fijo'),
+(4, 'Prueba Diego');
 
 -- --------------------------------------------------------
 
@@ -138,13 +154,22 @@ CREATE TABLE `usuario` (
 --
 
 INSERT INTO `usuario` (`id_usuario`, `fk_tipo_documento`, `fk_tipo_contrato`, `fk_rol`, `fk_incapacidades`, `nombre`, `apellido`, `correo`, `documento`, `password_user`, `estado`, `foto`) VALUES
-(5, 1, 2, 2, 0, 'diego', 'rojas', 'd@gmail.com', 1032369406, '12345', 'activo', ''),
-(13, 1, 1, 1, 0, 'juan', 'rojas', 'j@gmail.com', 123456, '123', 'activo', ''),
-(14, 1, 2, 3, 0, 'kevin', 'rojas', 'k@gmail.com', 1234565678, '123', 'activo', '');
+(5, 1, 2, 1, 0, 'diego', 'rojas', 'd@gmail.com', 1032369406, '12345', 'activo', ''),
+(13, 1, 1, 2, 0, 'juan', 'rojas', 'j@gmail.com', 123456, '123', 'activo', ''),
+(14, 1, 2, 3, 0, 'kevin', 'rojas', 'k@gmail.com', 1234565678, '123', 'activo', ''),
+(15, 1, 2, 3, 0, 'yineth', 'rojas', 'y@gmail.com', 1234567, '12345', '', '');
 
 --
 -- Índices para tablas volcadas
 --
+
+--
+-- Indices de la tabla `contrato`
+--
+ALTER TABLE `contrato`
+  ADD PRIMARY KEY (`id_contrato`),
+  ADD KEY `fk_tipo_contrato` (`fk_tipo_contrato`),
+  ADD KEY `fk_usuario` (`fk_usuario`);
 
 --
 -- Indices de la tabla `incapacidades`
@@ -184,6 +209,12 @@ ALTER TABLE `usuario`
 --
 
 --
+-- AUTO_INCREMENT de la tabla `contrato`
+--
+ALTER TABLE `contrato`
+  MODIFY `id_contrato` int(11) NOT NULL AUTO_INCREMENT;
+
+--
 -- AUTO_INCREMENT de la tabla `incapacidades`
 --
 ALTER TABLE `incapacidades`
@@ -193,13 +224,13 @@ ALTER TABLE `incapacidades`
 -- AUTO_INCREMENT de la tabla `rol`
 --
 ALTER TABLE `rol`
-  MODIFY `id_rol` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id_rol` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT de la tabla `tipo_contrato`
 --
 ALTER TABLE `tipo_contrato`
-  MODIFY `id_tipo_contrato` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id_tipo_contrato` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT de la tabla `tipo_documento`
@@ -211,11 +242,18 @@ ALTER TABLE `tipo_documento`
 -- AUTO_INCREMENT de la tabla `usuario`
 --
 ALTER TABLE `usuario`
-  MODIFY `id_usuario` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
+  MODIFY `id_usuario` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
 
 --
 -- Restricciones para tablas volcadas
 --
+
+--
+-- Filtros para la tabla `contrato`
+--
+ALTER TABLE `contrato`
+  ADD CONSTRAINT `contrato_ibfk_1` FOREIGN KEY (`fk_usuario`) REFERENCES `usuario` (`id_usuario`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `contrato_ibfk_2` FOREIGN KEY (`fk_tipo_contrato`) REFERENCES `tipo_contrato` (`id_tipo_contrato`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
 -- Filtros para la tabla `usuario`
