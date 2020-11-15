@@ -16,7 +16,7 @@
         <nav>
             <ul>
                 <!--li><a href="?c=Index&m=index">SenaLAB</a></li-->
-                <li><a href="?c=Usuarios&m=index">Inicio</a></li>
+                <li><a href="?c=Admin&m=index">Inicio</a></li>
                 <li><a href="">Contactanos</a></li>
                 <li><a href="?c=Login&m=index">Salir</a></li>
             </ul>

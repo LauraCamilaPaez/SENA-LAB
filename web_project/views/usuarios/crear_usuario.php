@@ -13,7 +13,7 @@
 <body>
   <header class="header-nav">
     <div class="container-nav">
-      <a href=""><img src="assets/img/logo-sena.png" alt="Logo Sena" class="logo"></a>
+      <a href=""><img src="assets/img/logosena.png" alt="Logo Sena" class="logo"></a>
       <nav>
         <ul>
           <li><a href="?c=Index&m=index">SenaLAB</a></li>
