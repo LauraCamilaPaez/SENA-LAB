@@ -11,6 +11,20 @@
 </head>
 <body>
 <header class="header-nav">
+    <div class="container-nav">
+        <a href=""><img src="assets/img/logo-sena.png" alt="Logo Sena" class="logo"></a>
+        <nav>
+            <ul>
+                <li><a href="?c=Index&m=index">SenaLAB</a></li>
+                <li><a href="?c=Admin&m=index">Inicio</a></li>
+                <li><a href="">Contactanos</a></li>
+                <li><a href="?c=Login&m=destroy">Salir</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+
 
 <div class="wrapper">
 

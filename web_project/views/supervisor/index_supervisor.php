@@ -32,7 +32,7 @@
         <a href=""><img src="assets/img/logo-sena.png" alt="Logo Sena" class="logo"></a>
         <nav>
           <ul>
-            <li><a href="#"> SenaLAB</a></li>
+            <li><a href="?c=Index&m=index"> SenaLAB</a></li>
             <li><a href="?c=Supervisor&m=index">Inicio</a></li>
             <li><a href="#">Contactanos</a></li>
             <li><a href="?c=Login&m=destroy">Salir</a></li>
