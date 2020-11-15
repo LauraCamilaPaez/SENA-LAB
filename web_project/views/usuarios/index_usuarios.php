@@ -35,13 +35,15 @@
                     </div>
                     <div class="card-body esdiv">
                     <p class="font-weight-bold m-0">Nombre</p>
-                        <td><?php echo $usuario->nombre ?></td>
+                        <td"><?php echo ucwords($usuario->nombre) ?></td>
                         <p class="font-weight-bold m-0">Apellido</p>
-                        <td><?php echo $usuario->apellido ?></td>
+                        <td><?php echo ucwords($usuario->apellido) ?></td>
                         <p class="font-weight-bold m-0">Email</p>
                         <td><?php echo $usuario->correo ?></td>
                         <p class="font-weight-bold m-0">Rol</p>
-                        <td><?php echo $usuario->fk_rol ?></td>
+                        <td><?php echo ucwords($usuario->fk_rol) ?></td>
+                        <p class="font-weight-bold m-0">Tipo de Contrato</p>
+                        <td><?php echo ucwords($usuario->fk_tipo_contrato)?></td>
                     </div>
                 </div>
             </div>
@@ -62,7 +64,7 @@
             </div>
 
         <div class="btn-group espaciobutton">
-            <a href="?c=Contrato&m=index" type="button" class="btn btn-info "  aria-haspopup="true" aria-expanded="false">Contrato</a>
+            <a href="?c=Contrato&m=index_usuario" type="button" class="btn btn-info "  aria-haspopup="true" aria-expanded="false">Contrato</a>
         </div>
     <div class="btn-group">    
             <a href="?c=usuarios&m=inc" type="button" class="btn btn-info "  aria-haspopup="true" aria-expanded="false">incapacidades</a>      

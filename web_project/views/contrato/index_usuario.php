@@ -1,4 +1,4 @@
-    <!doctype html>
+<!doctype html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -31,22 +31,13 @@
     <img style="max-width: 100%;"  src="assets/img/contrato.jpg" alt="contrato">
     <h1 style="display: flex; justify-content: center" class="mt-5">¿Qué podemos ofrecerte?</h1>
 
-    <div class="dropdown">
-        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Tipo de Contrato
-        </button>
-        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-            <a class="dropdown-item" href="?c=TipoContrato&m=create">Crear</a>
-            <a class="dropdown-item" href="?c=TipoContrato&m=index">Detalles</a>
-        </div>
-    </div>
 
     <div class="dropdown" style="margin-top:">
         <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             Certificado Laboral por Tiempo Indefinido
         </button>
         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-            <a class="dropdown-item" href="#">Crear</a>
+            <a class="dropdown-item" href="?c=Contrato&m=create_usuario">Crear</a>
             <a class="dropdown-item" href="#">Detalles</a>
             <a class="dropdown-item" href="#">Actualizar</a>
             <a class="dropdown-item" href="#">Eliminar</a>

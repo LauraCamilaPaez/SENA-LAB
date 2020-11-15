@@ -30,7 +30,7 @@
                     <input type="text" class="form-control" id="tipo_contrato" name="tipo_contrato">
                 </div>
                 <hr>
-                <button type="submit" class="btn btn-primary" style="width: auto;">Registrar</button>
+                <button type="submit" class="btn btn-primary" style="   width: auto;">Registrar</button>
             </form>
         </div>
     </div>
