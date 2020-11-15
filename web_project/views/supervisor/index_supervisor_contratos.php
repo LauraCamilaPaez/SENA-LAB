@@ -29,7 +29,7 @@
             <div class="col-md-12">
             <br><br>
             <br>
-                <h1>Incapacidades</h1>
+                <h1>Tipo contrato</h1>
                 <br>
                 <br>
                 

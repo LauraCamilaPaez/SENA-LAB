@@ -37,27 +37,7 @@
     </div>
 </head>
 
-<section>
-    <div class="colsv col-md-4">
-        <ul class="list-group">
-            <li class="list-group-item list-group-item-warning" style="color: #000000;">Administrador</li>
-            <li class="list-group-item">Crear Usuarios</li>
-            <li class="list-group-item">Ver Usuarios</li>
-            <li class="list-group-item">Editar Usuarios</li>
-            <li class="list-group-item">Eliminar Usuarios</li>
-        </ul>
-    </div>
 
-    <div class="colsv col-md-4" >
-        <ul class="list-group">
-            <li class="list-group-item list-group-item-success" style="color: #000000;">Usuario</li>
-            <li class="list-group-item ">Editar Perfil</li>
-            <li class="list-group-item">Ver Certificado</li>
-            <li class="list-group-item">Adjuntar Incapacidad</li>
-            <li class="list-group-item">Descargar Certificado</li>
-        </ul>
-    </div>
-</section>
     
       <section>
         <div class="container">
@@ -77,8 +57,8 @@
     
 
 
-  echo '</div>';
-  ?>
+  </div>'
+  
 
   </div>
 
