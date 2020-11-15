@@ -17,7 +17,7 @@
     <a href=""><img src="assets/img/logosena.png" alt="Logo Sena" class="logo"></a>
     <nav>
       <ul>
-        <!--li><a href="#"> SenaLAB</a></li-->
+        <li><a class="nav-link disabled" href="#"> SenaLAB</a></li>
         <li><a href="?c=Supervisor&m=index">Inicio</a></li>
         <li><a href="#">Contactanos</a></li>
         <li><a href="?c=Login&m=destroy">Salir</a></li>
@@ -28,57 +28,54 @@
 
 <body>
 
-<head>
+  <head>
     <div class="jumbotron">
-        <h1 class="display-4">Hola de nuevo, Supervisor!</h1>
-        <p class="lead">En esta parte podrás visualizar lo que hace el Administrador y también lo que hace el Usuario en este caso, los instructores en Servicio Nacional de Aprendizaje <b>SENA</b></p>
-        <hr class="my-4">
-        <p>Puedes entrar a este apartado cualquier día y cualquier hora! Solamente con tu Rol: Supervisor y Contraseña.</p>
+      <h1 class="display-4">Hola de nuevo, Supervisor!</h1>
+      <p class="lead">En este apartado usted podra hacer seguimiento a los docentes del Servicio Nacional de Aprendizaje <b>SENA.</b></p>
+      <hr class="my-4">
+      <p>Puedes entrar a este apartado en cualquier momento.</p>
     </div>
-</head>
+  </head>
 
-<section>
-    <div class="colsv col-md-4">
-        <ul class="list-group">
-            <li class="list-group-item list-group-item-warning" style="color: #000000;">Administrador</li>
-            <li class="list-group-item">Crear Usuarios</li>
-            <li class="list-group-item">Ver Usuarios</li>
-            <li class="list-group-item">Editar Usuarios</li>
-            <li class="list-group-item">Eliminar Usuarios</li>
-        </ul>
-    </div>
+ <section>
+    <div class="container">
+      <div class="row">
+        <div class="btn-group-justifique">
 
-    <div class="colsv col-md-4" >
-        <ul class="list-group">
-            <li class="list-group-item list-group-item-success" style="color: #000000;">Usuario</li>
-            <li class="list-group-item ">Editar Perfil</li>
-            <li class="list-group-item">Ver Certificado</li>
-            <li class="list-group-item">Adjuntar Incapacidad</li>
-            <li class="list-group-item">Descargar Certificado</li>
-        </ul>
-    </div>
-</section>
-    
-      <section>
-        <div class="container">
-          <div class="row">
-            <div class="col-md-4">
-              <button class="btn bis"><a href="?c=Supervisor&m=usuarios">Ver Usuarios</a></button>
-            </div>
-            <div class="col-md-4">
-              <button class="btn bis"><a href="?c=Supervisor&m=incapacidades">Ver Incapacidades</a></button>
-            </div>
-            <div class="col-md-4">
-              <button class="btn bis"><a href="">Ver certificados</a></button>
-            </div>
+          <div class="btn-group">
+            <!--button class="btn bis"><a href="?c=Supervisor&m=usuarios">Ver Usuarios</a></button-->
+            <a href="?c=Supervisor&m=usuarios" type="button" class="btn btn-info " aria-haspopup="true" aria-expanded="false">Ver Usuarios</a>
           </div>
+
+          <div class="btn-group">
+            <!--button class="btn bis"><a href="?c=Supervisor&m=incapacidades">Ver Incapacidades</a></button-->
+            <a href="?c=Supervisor&m=incapacidades" type="button" class="btn btn-info " aria-haspopup="true" aria-expanded="false">Ver Incapacidades</a>
+          </div>
+
+          <div class="btn-group">
+            <a href="#" type="button" class="btn btn-info " aria-haspopup="true" aria-expanded="false">Ver Certificados</a>
+          </div>
+          <div class="btn-group">
+            <a href="#" type="button" class="btn btn-info " aria-haspopup="true" aria-expanded="false">Contrato</a>
+          </div>
+
         </div>
-    </section>
-    
+      </div>
+    </div>
+  </section>
 
 
-  echo '</div>';
-  ?>
+  <?php
+        /*=============================================
+        FOOTER
+        =============================================*/
+
+        include "views/footer/footer.php";
+
+        echo '</div>';
+        ?>
+
+
 
   </div>
 
