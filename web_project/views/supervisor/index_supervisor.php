@@ -63,7 +63,7 @@
               <button class="btn bis"><a href="?c=Supervisor&m=incapacidades">Ver Incapacidades</a></button>
             </div>
             <div class="col-md-4">
-              <button class="btn bis"><a href="">Ver certificados</a></button>
+              <button class="btn bis"><a href="?c=Supervisor&m=contratos">Ver contratos</a></button>
             </div>
           </div>
         </div>

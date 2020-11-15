@@ -40,6 +40,16 @@
 			}catch(Exception $e){
 				die($e->getMessage());
 			}
+        }
+        
+        public function consultartipocontrato(){
+			try{
+				$stm=parent::connect()->prepare("SELECT id_tipo_contrato, tipo_contrato FROM tipo_contrato ");
+				$stm->execute();
+				return $stm->fetchALL(PDO::FETCH_OBJ);
+			}catch(Exception $e){
+				die($e->getMessage());
+			}
 		}
 
 
