@@ -6,12 +6,13 @@
     <link rel="shortcut icon" href="assets/img/sena.png">
     <title>Registro Usuarios</title>
     <link rel="stylesheet" href="assets/all/css/style.css">
+    <link rel="shortcut icon" href="assets/img/sena.png">
     <script src="https://kit.fontawesome.com/a81368914c.js"></script>
 </head>
 <body>
 <header class="header-nav">
     <div class="container-nav">
-        <a href=""><img src="assets/img/logo-sena.png" alt="Logo Sena" class="logo"></a>
+        <a href=""><img src="assets/img/logosena.png" alt="Logo Sena" class="logo"></a>
         <nav>
             <ul>
                 <li><a href="?c=Index&m=index">SenaLAB</a></li>
@@ -36,7 +37,6 @@
     <form class="form" action="?c=Admin&m=update" method="post">
 
         <?php
-        $id = $_REQUEST['id'];
         $r = parent::request();
         ?>
 

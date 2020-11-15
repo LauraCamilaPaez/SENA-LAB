@@ -102,5 +102,3 @@ class Admin extends DB{
 	}
 
 }
-
-?>
