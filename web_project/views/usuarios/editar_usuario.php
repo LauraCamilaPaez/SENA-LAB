@@ -37,7 +37,7 @@
     <form class="form" action="?c=Admin&m=update" method="post">
 
         <?php
-        $r = parent::request();
+        $r = parent::consultraId();
         ?>
 
         <input type="hidden" value="<?php echo $id ?>" name="id_usuario" class="form-control" readonly >
