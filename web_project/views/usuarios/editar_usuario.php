@@ -61,17 +61,6 @@
 
                 </div>
 
-                <div class="custom_select">
-                        <select name="fk_tipo_documento" >
-
-                            <option value="">Seleccionar Cargo</option>
-
-                            <?php foreach(parent::consultarTD() as $r) { ?>
-                                <option value="<?php echo $r->id_tipo_documento ?>"><?php echo $r->tipo_documento ?></option>
-                            <?php } ?>
-
-                        </select>
-                </div>
 
                 <div class="inputfield">
                     <label>Número Documento</label>
@@ -105,6 +94,22 @@
 
                 </div>
 
+                <div class="inputfield">
+                    <label >Tipo_documento</label>
+
+                    <div class="custom_select">
+                            <select name="fk_tipo_documento" >
+
+                                <option value="">Seleccionar Cargo</option>
+
+                                <?php foreach(parent::consultarTipoDocumento() as $r) { ?>
+                                    <option value="<?php echo $r->id_tipo_documento ?>"><?php echo $r->tipo_documento ?></option>
+                                <?php } ?>
+
+                            </select>
+                    </div>
+
+                </div>
             <?php }  } ?>
 
         <div class="inputfield">
