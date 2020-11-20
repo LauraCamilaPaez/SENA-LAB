@@ -42,7 +42,8 @@
 
         <input type="hidden" value="<?php echo $id ?>" name="id" class="form-control" readonly >
 
-        <?php foreach($r as $a){
+        <?php
+        foreach($r as $a){
             if($id == $a->id_usuario){
                 ?>
 
