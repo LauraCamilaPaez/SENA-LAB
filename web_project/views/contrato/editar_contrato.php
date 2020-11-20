@@ -35,6 +35,7 @@
     <form class="form" action="?c=Contrato&m=update" method="post">
 
         <?php
+        
         $r = parent::request();
         ?>
 

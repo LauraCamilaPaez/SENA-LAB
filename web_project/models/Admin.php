@@ -31,9 +31,9 @@ class Admin extends DB{
         }
     }
 
-    public function actualizar($fk_rol,$nombre,$apellido,$correo,$password_user,$tipo_documento,$documento, $id){
+    public function actualizar($fk_tipo_documento, $fk_rol,$nombre,$apellido,$correo,$password_user,$documento, $id){
         try{
-            $stm = parent::connect()->prepare("UPDATE usuario SET fk_rol='$fk_rol', nombre='$nombre', apellido='$apellido', correo='$correo', password_user='$password_user', tipo_documento='$tipo_documento', documento='$documento'  WHERE id_usuario=$id");
+            $stm = parent::connect()->prepare("UPDATE usuario SET fk_tipo_documento='$fk_tipo_documento',fk_rol='$fk_rol', nombre='$nombre', apellido='$apellido', correo='$correo', password_user='$password_user', documento='$documento'  WHERE id_usuario=$id");
             $stm->execute();
         }catch(Exception $e){
             die($e->getMessage());
@@ -61,7 +61,7 @@ class Admin extends DB{
         }
     }
 
-    public function consultartipo_documento(){
+    public function consultarTD(){
         try{
             $stm = parent::connect()->prepare("SELECT * FROM tipo_documento");
             $stm->execute();
