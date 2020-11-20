@@ -38,6 +38,7 @@ class AdminController extends Admin{
     }
 
 
+
     public function destroy(){
         parent::destroyDato($_REQUEST['id']);
         header("location:?c=Usuarios&m=usuarios");

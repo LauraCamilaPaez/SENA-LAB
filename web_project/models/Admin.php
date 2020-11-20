@@ -1,7 +1,9 @@
 <?php
 
 class Admin extends DB{
-
+/*=============================================
+	CONSULTAR USUARIOS
+	=============================================*/
     public function consultar(){
         try{
             $stm=parent::connect()->prepare("SELECT id_usuario, fk_rol, nombre, apellido, correo, password_user , fk_tipo_documento, documento");
@@ -12,6 +14,10 @@ class Admin extends DB{
         }
     }
 
+    /*=============================================
+	INSERTAR USUARIOS
+	=============================================*/
+
     public function insertar($fk_rol, $nombre, $apellido, $correo, $password_user,  $fk_tipo_documento, $documento, $fk_tipo_contrato){
         try{
             $stm = parent::connect()->prepare("INSERT INTO usuario(fk_rol ,nombre,apellido,correo,password_user,fk_tipo_documento,documento,fk_tipo_contrato) VALUES ('$fk_rol', '$nombre', '$apellido', '$correo', '$password_user',  '$fk_tipo_documento', '$documento', '$fk_tipo_contrato') ");
@@ -20,6 +26,10 @@ class Admin extends DB{
             die($e->getMessage());
         }
     }
+
+    /*=============================================
+	ELIMINAR USUARIOS
+	=============================================*/
 
     public function destroyDato($UsuarioID){
         try{
@@ -30,6 +40,10 @@ class Admin extends DB{
             die($e->getMessage());
         }
     }
+
+      /*=============================================
+	ACTUALIZAR USUARIOS
+	=============================================*/
 
     public function actualizar($fk_rol,$nombre,$apellido,$correo,$password_user,$tipo_documento,$documento, $id){
         try{

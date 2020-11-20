@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!--DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -17,7 +17,7 @@
                                 <a href=""><img src="assets/img/logosena.png" alt="Logo Sena" class="logo"></a>
                                 <nav>
                                     <ul>
-                                        <!--li><a href="?c=Index&m=index">SenaLAB</a></li-->
+                                    <li><a class="nav-link disabled" href="#"> SenaLAB</a></li>
                                         <li><a href="?c=Usuarios&m=index">Inicio</a></li>
                                         <li><a href="">Contactanos</a></li>
                                         <li><a href="?c=Login&m=index">Ingresar</a></li>

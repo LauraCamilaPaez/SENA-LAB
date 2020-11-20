@@ -8,6 +8,7 @@
   <title>incapacidades</title>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
   <link rel="stylesheet" href="assets/all/css/style.css">
+  <link rel="shortcut icon" href="assets/img/sena.png">
 </head>
 
 <body>
@@ -33,18 +34,18 @@
         <table class="table" style="margin-top: 40px;">
           <thead class="thead-dark">
             <tr>
-              <th>nombre</th>
-              <th>telefono</th>
-              <th>correo</th>
-              <th>mensaje</th>
-              <th>pdf</th>
+              <th>Nombre</th>
+              <th>Correo Electrónico</th>
+              <th>Teléfono</th>
+              <th>Mensaje</th>
+              <th>Archivo PDF</th>
             </tr>
           </thead>
           <?php foreach (parent::consultarincapacidades()  as $r) {    ?>
             <tr>
               <th><?php echo $r->nombre ?></th>
-              <th><?php echo $r->telefono ?></th>
               <td><?php echo $r->correo ?></td>
+              <th><?php echo $r->telefono ?></th>
               <td><?php echo $r->mensaje ?></td>
               <td><?php echo $r->pdf ?></td>
             </tr>

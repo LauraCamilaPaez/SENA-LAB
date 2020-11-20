@@ -24,7 +24,7 @@
             </nav>
         </div>
     </header>
-    <div class="container-tabla-usuarios">
+    <div class="container">
         <div class="row">
             <div class="table-responsive-sm">
                 <table class="table" style="margin-top: 40px;">
@@ -71,7 +71,15 @@
         </div>
     </div>
     </section>
+    <?php
+    /*=============================================
+        FOOTER
+        =============================================*/
 
+    include "views/footer/footer.php";
+
+    echo '</div>';
+    ?>
 
 
 

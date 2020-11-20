@@ -3,7 +3,8 @@
 class SupervisorController extends Supervisor{
 
     public function index(){
-        require_once('views/supervisor/index_supervisor.php');
+		
+		require_once('views/supervisor/index_supervisor.php');
     }
 
     public function usuarios(){
@@ -14,14 +15,17 @@ class SupervisorController extends Supervisor{
 		require_once('views/supervisor/index_supervisor_incapacidades.php');
 	}
 
+	
+
 	//public function contrato(){
 	//	require_once('views/supervisor/index_supervisor_contrato.php');
 	//}
     
-
+		
 
     public function store(){
 
+		
 		$fk_rol = $_POST['fk_rol'];
 		$nombre = $_POST['nombre'];
 		$apellido = $_POST['apellido'];
@@ -33,6 +37,8 @@ class SupervisorController extends Supervisor{
 		parent::insertar($fk_rol,$nombre,$apellido,$correo,$password_user,$fk_tipo_documento,$documento,$fk_tipo_contrato);
 		header('location:?c=Usuarios&m=usuarios');
 	}
+
+	
 
 
 }

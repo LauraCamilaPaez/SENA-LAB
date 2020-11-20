@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
     <title>Vista Usuario</title>
     <link rel="stylesheet" href="assets/all/css/style.css">
+    <link rel="shortcut icon" href="assets/img/sena.png">
 </head>
 
 <body>
@@ -35,9 +36,10 @@
                             <th scope="col">Cargo</th>
                             <th scope="col">Nombres</th>
                             <th scope="col">Apellidos</th>
+                            <th scope="col">Numero_documento</th>
                             <th scope="col">Correo</th>
                             <th scope="col">Tipo_documento</th>
-                            <th scope="col">Numero_documento</th>
+                            
                         </tr>
                     </thead>
 
@@ -53,9 +55,10 @@
                                 <td><?php echo $r->rol ?></td>
                                 <td><?php echo $r->nombre ?></td>
                                 <td><?php echo $r->apellido ?></td>
+                                <td><?php echo $r->documento ?></td>
                                 <td><?php echo $r->correo ?></td>
                                 <td><?php echo $r->tipo_documento ?></td>
-                                <td><?php echo $r->documento ?></td>
+                                
                             </tr>
                         </tbody>
                     <?php } ?>

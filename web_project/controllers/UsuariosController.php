@@ -15,7 +15,7 @@ class UsuariosController extends Usuario{
 	}
 
     public function inc(){
-		require_once('views/usuarios/incapacidades.php');
+		require_once('views/usuarios/incapacidad_usuario.php');
 	}
 
 }

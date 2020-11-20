@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>Inicio Supervisor</title>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
   <link rel="stylesheet" href="assets/all/css/style.css">
   <link rel="shortcut icon" href="assets/img/sena.png">
@@ -30,14 +30,15 @@
 
   <head>
     <div class="jumbotron">
-      <h1 class="display-4">Hola de nuevo, Supervisor!</h1>
+      <?php $usuario = $_SESSION['id_usuario'] ?>
+      <h1 class="display-4 ">Hola de nuevo, <?php echo $usuario->nombre ?></h1>
       <p class="lead">En este apartado usted podra hacer seguimiento a los docentes del Servicio Nacional de Aprendizaje <b>SENA.</b></p>
       <hr class="my-4">
       <p>Puedes entrar a este apartado en cualquier momento.</p>
     </div>
   </head>
 
- <section>
+  <section>
     <div class="container">
       <div class="row">
         <div class="btn-group-justifique">
@@ -66,18 +67,14 @@
 
 
   <?php
-        /*=============================================
+  /*=============================================
         FOOTER
         =============================================*/
 
-        include "views/footer/footer.php";
+  include "views/footer/footer.php";
 
-        echo '</div>';
-        ?>
-
-
-
-  </div>
+  echo '</div>';
+  ?>
 
   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>

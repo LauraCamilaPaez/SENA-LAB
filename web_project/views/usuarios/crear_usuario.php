@@ -49,28 +49,27 @@
         </div>
       </div>
 
-        <div class="inputfield">
-            <label>Número Documento</label>
-            <input type="number" class="input" name="documento" required>
-        </div>
-        <div class="inputfield">
-            <label>Correo Misena</label>
-            <input type="text" class="input" name="correo" required>
-        </div>
-        <div class="inputfield">
-            <label>Contraseña</label>
-            <input type="password" name="password_user" class="input" required>
-        </div>
-        <div class="inputfield">
-            <label>Cargo</label>
-            <div class="custom_select">
-                <select name="fk_rol" >
-                    <option value="">Seleccionar Cargo</option>
-                    <?php foreach(parent::consultarRol() as $r) { ?>
-                        <option value="<?php echo $r->id_rol ?>"><?php echo( $r->rol)?></option>
-                    <?php } ?>
-                </select>
-            </div>
+      <div class="inputfield">
+        <label>Número Documento</label>
+        <input type="number" class="input" name="documento" required>
+      </div>
+      <div class="inputfield">
+        <label>Correo Misena</label>
+        <input type="text" class="input" name="correo" required>
+      </div>
+      <div class="inputfield">
+        <label>Contraseña</label>
+        <input type="password" name="password_user" class="input" required>
+      </div>
+      <div class="inputfield">
+        <label>Cargo</label>
+        <div class="custom_select">
+          <select name="fk_rol">
+            <option value="">Seleccionar Cargo</option>
+            <?php foreach (parent::consultarRol() as $r) { ?>
+              <option value="<?php echo $r->id_rol ?>"><?php echo ($r->rol) ?></option>
+            <?php } ?>
+          </select>
         </div>
       </div>
       <div class="inputfield">
@@ -84,11 +83,14 @@
           </select>
         </div>
       </div>
-
       <div class="inputfield">
-        <button type="submit" value="Registrar" class="btn">Registrar</button>
-      </div>
-    </form>
+    <button type="submit" value="Registrar" class="btn">Registrar</button>
+  </div>
+  </div>
+
+
+  
+  </form>
   </div>
 
 </body>
