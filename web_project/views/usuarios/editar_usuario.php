@@ -37,6 +37,7 @@
     <form class="form" action="?c=Admin&m=update" method="post">
 
         <?php
+        $id = $_REQUEST['id'];
         $r = parent::request();
         ?>
 
