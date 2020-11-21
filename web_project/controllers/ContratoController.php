@@ -27,7 +27,7 @@ class ContratoController extends Contrato{
         $salario = $_POST['salario'];
         $fecha_inicio = $_POST['fecha_inicio'];
         $fecha_terminacion = $_POST['fecha_terminacion'];
-        parent::actualizar($fk_tipo_contrato,$fk_usuario,$salario,$fecha_inicio,$fecha_terminacion, $id);
+        parent::actualizar($fk_tipo_contrato,$fk_usuario,$salario,$fecha_inicio,$fecha_terminacion,$id);
         header('location:?c=Usuarios&m=usuarios');
     }
 
