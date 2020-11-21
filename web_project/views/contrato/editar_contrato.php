@@ -39,20 +39,11 @@
         $r = parent::requestContrato();
         ?>
 
-        <input type="hidden" value="<?php echo $id ?>" name="id" class="form-control" readonly >
+        <input type="hidden" value="<?php echo $id ?>" name="id_contrato" class="form-control" readonly >
 
         <?php foreach($r as $a){
             if($id == $a->id_contrato){
                 ?>
-                <div class="inputfield">
-                    <label>Usuario</label>
-                    <div class="custom_select">
-                        <select name="fk_usuario" >
-                            <option value="">Seleccionar Usuario</option>
-                                <option value=""><?php echo $a->fk_usuario ?></option>
-                        </select>
-                    </div>
-                </div>
                 <div class="inputfield">
                     <label>Tipo Contrato</label>
                     <div class="custom_select">

@@ -13,6 +13,9 @@ class ContratoController extends Contrato{
     public function IndexContrato(){
         require_once('views/contrato/index_contrato.php');
     }
+    public function IndexScontrato(){
+        require_once('views/contrato/indexS_contrato.php');
+    }
     public function store(){
 
         $fk_tipo_contrato = $_POST['fk_tipo_contrato'];
@@ -24,13 +27,12 @@ class ContratoController extends Contrato{
         header('location:?c=Usuarios&m=usuarios');
     }
     public function update(){
-        $id = $_POST['id'];
+        $id = $_POST['id_contrato'];
         $fk_tipo_contrato = $_POST['fk_tipo_contrato'];
-        $fk_usuario = $_POST['fk_usuario'];
         $salario = $_POST['salario'];
         $fecha_inicio = $_POST['fecha_inicio'];
         $fecha_terminacion = $_POST['fecha_terminacion'];
-        parent::actualizar($fk_tipo_contrato,$fk_usuario,$salario,$fecha_inicio,$fecha_terminacion,$id);
+        parent::actualizar($fk_tipo_contrato,$salario,$fecha_inicio,$fecha_terminacion,$id);
         header('location:?c=Contrato&m=IndexContrato');
     }
 

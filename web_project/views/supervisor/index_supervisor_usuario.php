@@ -34,6 +34,8 @@
                         <th scope="col">Correo</th>
                         <th scope="col">Tipo_documento</th>
                         <th scope="col">Numero_documento</th>
+                        <th scope="col">contrato</th>
+
                     </tr>
                 </thead>
 
@@ -52,6 +54,11 @@
                         <td><?php echo $r->correo ?></td>
                         <td><?php echo $r->tipo_documento ?></td>
                         <td><?php echo $r->documento ?></td>
+                        <td>
+                            <div class="btn-group" role="group" aria-label="Basic example">
+                                <a href="?c=Contrato&m=IndexScontrato" class="btn-success btn-sm">ver</a>
+                            </div>
+                        </td>
                     </tr>
                 </tbody>
                 <?php } ?>
