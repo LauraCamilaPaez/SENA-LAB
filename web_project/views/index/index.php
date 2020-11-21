@@ -42,7 +42,7 @@
                     <div class="carousel-item active">
                         <img class="d-block w-100" src="assets/img/s3.jpg" alt="First slide">
                         <div class="carousel-caption d-none d-md-block">
-                            <h5>3500 Jóvenes del sur Córdoba se benefician con nuevo Sena en Montelíbano:Duque. </h5>
+                            <h5>Podras </h5>
                         </div>
                     </div>
                     <div class="carousel-item">
@@ -68,9 +68,8 @@
         </section>
 
         <div class="espacio-2">
-            <h4>Lorem ipsum dolor sit amet consectetur</h4>
+            <h4><b>Datos de interes</b></h4>
             <br><br>
-            <p>gfgfgf</p>
             <img src="assets/img/naranja.png" alt="" class="espacio-2 img-fluid img-thumbnail mx-auto d-block">
         </div>
 
