@@ -19,7 +19,6 @@ class Contrato extends DB{
         }catch(Exception $e){
             die($e->getMessage());
         }
-    
     }
     public function consultartipo_contrato(){
         try{
