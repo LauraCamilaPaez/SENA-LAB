@@ -18,7 +18,6 @@ class Contrato extends DB{
         }catch(Exception $e){
             die($e->getMessage());
         }
-    
     }
     public function consultartipo_contrato(){
         try{
@@ -29,9 +28,9 @@ class Contrato extends DB{
             die($e->getMessage());
         }
     }
-    public function consultarId($id){
+    public function consultarId($id_contrato){
         try{
-            $stm = parent::connect()->prepare('SELECT * FROM contrato  WHERE id_contrato = $id');
+            $stm = parent::connect()->prepare('SELECT * FROM contrato  WHERE id_contrato = $id_contrato');
             $stm->execute();
             return $stm->fetch(PDO::FETCH_OBJ);
         }catch(Exception $e){
@@ -46,15 +45,15 @@ class Contrato extends DB{
             die($e->getMessage());
         }
     }
-    public function actualizar($fk_tipo_contrato, $fk_usuario, $salario, $fecha_inicio, $fecha_terminacion, $id){
+    public function actualizar($fk_tipo_contrato, $salario, $fecha_inicio, $fecha_terminacion, $id){
         try{
-            $stm = parent::connect()->prepare("UPDATE contrato SET fk_tipo_contrato='$fk_tipo_contrato', fk_usuario='$fk_usuario', salario='$salario', fecha_inicio='$fecha_inicio', fecha_terminacion='$fecha_terminacion' WHERE id_usuario=$id");
+            $stm = parent::connect()->prepare("UPDATE contrato SET fk_tipo_contrato='$fk_tipo_contrato', salario='$salario', fecha_inicio='$fecha_inicio', fecha_terminacion='$fecha_terminacion' WHERE id_contrato=$id");
             $stm->execute();
         }catch(Exception $e){
             die($e->getMessage());
         }
     }
-    public function request(){
+    public function requestContrato(){
 		try{
 			$stm=parent::connect()->prepare("SELECT * FROM contrato INNER JOIN tipo_contrato ON contrato.fk_tipo_contrato = tipo_contrato.id_tipo_contrato INNER JOIN usuario ON contrato.fk_usuario = usuario.id_usuario");
 			$stm->execute();

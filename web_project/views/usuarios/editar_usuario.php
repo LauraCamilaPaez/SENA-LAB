@@ -37,6 +37,7 @@
     <form class="form" action="?c=Admin&m=update" method="post">
 
         <?php
+        $id = $_REQUEST['id'];
         $r = parent::request();
         ?>
 
@@ -60,18 +61,6 @@
 
                 </div>
 
-                <div class="inputfield">
-
-                    <label>Tipo de Documento</label>
-
-                    <div class="custom_select">
-                        <select  name="tipo_documento">
-                            <option value="<?php echo $a->tipo_documento ?>" >Seleccionar Tipo de Documento</option>
-                            <option value="cedula de ciudadania" >Cédula de Ciudadanía</option>
-                            <option value="cedula de extranjeria">Cédula de Extranjería</option>
-                        </select>
-                    </div>
-                </div>
 
                 <div class="inputfield">
                     <label>Número Documento</label>
@@ -105,6 +94,22 @@
 
                 </div>
 
+                <div class="inputfield">
+                    <label >Tipo_documento</label>
+
+                    <div class="custom_select">
+                            <select name="fk_tipo_documento" >
+
+                                <option value="">Seleccionar Cargo</option>
+
+                                <?php foreach(parent::consultarTipoDocumento() as $r) { ?>
+                                    <option value="<?php echo $r->id_tipo_documento ?>"><?php echo $r->tipo_documento ?></option>
+                                <?php } ?>
+
+                            </select>
+                    </div>
+
+                </div>
             <?php }  } ?>
 
         <div class="inputfield">
