@@ -24,7 +24,7 @@ class ContratoController extends Contrato{
         header('location:?c=Usuarios&m=usuarios');
     }
     public function update(){
-        $id = $_POST['id_contrato'];
+        $id = $_POST['id'];
         $fk_tipo_contrato = $_POST['fk_tipo_contrato'];
         $fk_usuario = $_POST['fk_usuario'];
         $salario = $_POST['salario'];

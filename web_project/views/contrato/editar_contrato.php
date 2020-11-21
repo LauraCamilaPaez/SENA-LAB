@@ -49,9 +49,7 @@
                     <div class="custom_select">
                         <select name="fk_usuario" >
                             <option value="">Seleccionar Usuario</option>
-                            <?php foreach(parent::consultarusuario() as $r) { ?>
-                                <option value="<?php echo $r->id_usuario ?>"><?php echo $r->nombre ?></option>
-                            <?php } ?>
+                                <option value=""><?php echo $a->fk_usuario ?></option>
                         </select>
                     </div>
                 </div>
@@ -66,7 +64,8 @@
                         </select>
                     </div>
                 </div>
-
+                        
+   
                 <div class="inputfield">
                     <label>salario</label>
                     <input type="number" class="input" name="salario" value="<?php echo $a->salario ?>" required>
