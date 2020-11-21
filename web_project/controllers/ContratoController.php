@@ -2,6 +2,7 @@
 
 class ContratoController extends Contrato{
     public function index(){
+        $contratos=parent::all();
         require_once('views/contrato/index.php');
     }
     public function detalles(){
@@ -37,8 +38,4 @@ class ContratoController extends Contrato{
     }
 
 }
-
-
-
-
 ?>  

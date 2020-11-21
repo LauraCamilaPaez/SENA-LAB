@@ -10,7 +10,6 @@ class Contrato extends DB{
             die($e->getMessage());
         }
     }
-
     public function consultarusuario(){
         try{
             $stm = parent::connect()->prepare("SELECT * FROM usuario");
@@ -63,6 +62,4 @@ class Contrato extends DB{
 			die($e->getMessage());
 		}
 	}
-
-
 }
