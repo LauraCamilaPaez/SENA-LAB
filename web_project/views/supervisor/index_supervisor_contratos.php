@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>incapacidades</title>
+    <title>Contrato</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/all/css/style.css">
 </head>
@@ -32,22 +32,26 @@
                 <h1>Tipo contrato</h1>
                 <br>
                 <br>
-                
-                <table class="table">
 
-            
+                <table class="table">
+                    <thead class="thead-dark">
                     <tr>
-                        <th>id</th>
-                        <th>Tipo_contrato</th>
+                        <th scope="col">#</th>
+                        <th scope="col">Nombre</th>
+                        <th scope="col">Cargo</th>
+                        <th scope="col">Tipo de Contrato</th>
                     </tr>
-                     <?php  foreach(parent::consultartipocontrato()  as $r){    ?>
-                  
+                    </thead>
+                    <tbody>
+                    <?php  foreach(parent::consultartipocontrato()  as $r){    ?>
                     <tr>
-                        <th><?php echo $r->id_tipo_contrato ?></th>
-                        <th><?php echo $r->tipo_contrato ?></th>
+                        <td><?php echo $r->id_tipo_contrato ?></td>
+                        <td>Laura Camila</td>
+                        <td>Usuario</td>
+                        <td><?php echo $r->tipo_contrato ?></td>
                     </tr>
-     
                     <?php } ?>
+                    </tbody>
                 </table>
             </div> 
        </div>

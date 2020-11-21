@@ -17,10 +17,6 @@ class SupervisorController extends Supervisor{
 	public function contratos(){
 		require_once('views/supervisor/index_supervisor_contratos.php');
 	}
-	
-	
-    
-
 
     public function store(){
 
