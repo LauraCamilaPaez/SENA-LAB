@@ -36,7 +36,7 @@
 
         <?php
         $id = $_REQUEST['id'];
-        $r = parent::request();
+        $r = parent::requestContrato();
         ?>
 
         <input type="hidden" value="<?php echo $id ?>" name="id" class="form-control" readonly >
@@ -44,6 +44,17 @@
         <?php foreach($r as $a){
             if($id == $a->id_contrato){
                 ?>
+                <div class="inputfield">
+                    <label>Usuario</label>
+                    <div class="custom_select">
+                        <select name="fk_usuario" >
+                            <option value="">Seleccionar Usuario</option>
+                            <?php foreach(parent::consultarusuario() as $r) { ?>
+                                <option value="<?php echo $r->id_usuario ?>"><?php echo $r->nombre ?></option>
+                            <?php } ?>
+                        </select>
+                    </div>
+                </div>
                 <div class="inputfield">
                     <label>Tipo Contrato</label>
                     <div class="custom_select">
@@ -71,17 +82,6 @@
                     <input type="date" name="fecha_terminacion" class="input" value="<?php echo $a->fecha_terminacion ?>" required>
                 </div>
 
-                <div class="inputfield">
-                    <label>Usuario</label>
-                    <div class="custom_select">
-                        <select name="fk_usuario" >
-                            <option value="">Seleccionar Cargo</option>
-                            <?php foreach(parent::consultarusuario() as $r) { ?>
-                                <option value="<?php echo $r->id_usuario ?>"><?php echo $r->nombre ?></option>
-                            <?php } ?>
-                        </select>
-                    </div>
-                </div>
             <?php }  } ?>
 
         <div class="inputfield">
@@ -95,3 +95,5 @@
 
 </body>
 </html>
+
+

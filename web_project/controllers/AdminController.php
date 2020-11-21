@@ -25,7 +25,7 @@ class AdminController extends Admin{
 
 
 	public function update(){
-        $id = $_POST['id_usuario'];
+        $id = $_POST['id_contrato'];
 		$fk_tipo_documento = $_POST['fk_tipo_documento'];
 		$fk_rol = $_POST['fk_rol'];
 		$nombre = $_POST['nombre'];
