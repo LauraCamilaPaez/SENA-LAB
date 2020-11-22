@@ -12,7 +12,10 @@ class ContratoController extends Contrato{
         require_once('views/contrato/editar_contrato.php');
     }
     public function IndexContrato(){
-        require_once('views/contrato/index_contrato.php');
+        require_once('views/admin/index_admin_contrato.php');
+    }
+    public function IndexUContrato(){
+        require_once('views/usuarios/index_usuario_contrato.php');
     }
     public function IndexScontrato(){
         require_once('views/contrato/indexS_contrato.php');

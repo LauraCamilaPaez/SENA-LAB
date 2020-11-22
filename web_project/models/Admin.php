@@ -42,7 +42,7 @@ class Admin extends DB{
 
     public function requestEmail($email, $password){
         try{
-            $stm = parent::connect()->prepare('SELECT * FROM usuario WHERE correo = ? AND password_user = ? ');
+            $stm = parent::connect()->prepare('SELECT u.*, r.rol FROM `usuario` u LEFT JOIN rol r ON r.id_rol=u.fk_rol WHERE correo = ? AND password_user = ? ');
             $stm->bindParam(1,$email,PDO::PARAM_STR);
             $stm->bindParam(2,$password,PDO::PARAM_STR);
             $stm->execute();

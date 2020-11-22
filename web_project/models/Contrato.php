@@ -62,4 +62,14 @@ class Contrato extends DB{
 			die($e->getMessage());
 		}
 	}
+    public function requestContractByUserId($user_id){
+        try{
+            $stm=parent::connect()->prepare("SELECT * FROM contrato INNER JOIN tipo_contrato ON contrato.fk_tipo_contrato = tipo_contrato.id_tipo_contrato INNER JOIN usuario ON contrato.fk_usuario = usuario.id_usuario WHERE contrato.fk_usuario = ? ");
+            $stm->bindParam(1, $user_id, PDO::PARAM_INT);
+            $stm->execute();
+            return $stm->fetchALL(PDO::FETCH_OBJ);
+        }catch(Exception $e){
+            die($e->getMessage());
+        }
+    }
 }

@@ -43,7 +43,7 @@
                     <p class="font-weight-bold m-0">Email</p>
                     <td><?php echo $usuario->correo ?></td>
                     <p class="font-weight-bold m-0">Rol</p>
-                    <td><?php echo $usuario->fk_rol ?></td>
+                    <td><?=ucwords($usuario->rol) ?></td>
                 </div>
             </div>
         </div>
@@ -57,6 +57,10 @@
 
         <div class="btn-group">
             <a href="?m=index&c=Incapacidades" type="button" class="btn btn-info "  aria-haspopup="true" aria-expanded="false">Incapacidades</a>
+        </div>
+
+        <div class="btn-group espaciobutton">
+            <a href="?c=Contrato&m=IndexContrato" type="button" class="btn btn-info "  aria-haspopup="true" aria-expanded="false">Contratos</a>
         </div>
 
         <div class="btn-group espaciobutton">

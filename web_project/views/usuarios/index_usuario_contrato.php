@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
-    <title>Usuarios</title>
+    <title>Contrato Instructor | Usuario</title>
     <link rel="stylesheet" href="assets/all/css/style.css">
     <link rel="shortcut icon" href="assets/img/sena.png">
 </head>
@@ -29,45 +29,42 @@
                 <thead class="thead-dark">
                 <tr>
                     <th scope="col"  style="visibility: hidden">#</th>
-                    <th scope="col">Cargo</th>
+                    <th scope="col">Tipo de Contrato</th>
                     <th scope="col">Nombres</th>
                     <th scope="col">Apellidos</th>
                     <th scope="col">Correo</th>
-                    <th scope="col">Tipo_documento</th>
-                    <th scope="col">Numero_documento</th>
-                    <th scope="col">contrato</th>
-                    <th scope="col"><center>C-R-U-D</center></th>
+                    <th scope="col">Salario</th>
+                    <th scope="col">Fecha inicio</th>
+                    <th scope="col">Fecha terminacion</th>
+                    <th scope="col">Read</th>
                 </tr>
                 </thead>
 
                 <?php
+
+                $usuario = $_SESSION['id_usuario'];
+
                 $i=0;
-                foreach(parent::request() as $r){
+                foreach(parent::requestContractByUserId($usuario->id_usuario) as $r){
                     $i++;
                     ?>
 
                     <tbody>
                     <tr>
-                        <th scope="row" style="visibility: hidden"><?php echo $r->id_usuario ?></th>
-                        <td><?php echo $r->rol?></td>
+                        <th scope="row" style="visibility: hidden"><?php echo $r->id_contrato ?></th>
+                        <td><?php echo $r->tipo_contrato ?></td>
                         <td><?php echo $r->nombre ?></td>
                         <td><?php echo $r->apellido ?></td>
                         <td><?php echo $r->correo ?></td>
-                        <td><?php echo $r->tipo_documento ?></td>
-                        <td><?php echo $r->documento ?></td>
+                        <td><?php echo $r->salario ?></td>
+                        <td><?php echo $r->fecha_inicio ?></td>
+                        <td><?php echo $r->fecha_terminacion ?></td>
                         <td>
                             <div class="btn-group" role="group" aria-label="Basic example">
-                                <a href="?c=Contrato&m=detalles" class="btn-success btn-sm">crear</a>
-                                <a href="?c=Contrato&m=IndexContrato" class="btn-success btn-sm">ver</a>
+                                <a href="?c=Contrato&m=detalles" class="btn-success btn-sm p-2">Ver</a>
                             </div>
                         </td>
-                        <td>
-                            <div class="btn-group" role="group" aria-label="Basic example">
-                                <a href="?c=Admin&m=create" class="btn-info btn-sm"> <i class="fas fa-plus"></i> Crear usuarios</a>
-                                <a href="?c=Usuarios&m=editar&id=<?php echo $r->id_usuario ?>" class=" btn-warning btn-sm">Editar</a>
-                                <a href="?c=Admin&m=destroy&id=<?php echo $r->id_usuario ?>" class="btn-danger btn-sm">Eliminar</a>
-                            </div>
-                        </td>
+
                     </tr>
                     </tbody>
                 <?php } ?>
@@ -75,7 +72,7 @@
         </div>
     </div>
 </div>
-</section>   
+</section>
 
 
 
