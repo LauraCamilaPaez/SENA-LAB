@@ -29,7 +29,7 @@
                 <thead class="thead-dark">
                 <tr>
                     <th scope="col"  style="visibility: hidden">#</th>
-                    <th scope="col">Tipo_contrato</th>
+                    <th scope="col">Tipo de Contrato</th>
                     <th scope="col">Nombres</th>
                     <th scope="col">Apellidos</th>
                     <th scope="col">Correo</th>

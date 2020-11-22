@@ -43,13 +43,14 @@
         <div class="container">
           <div class="row">
             <div class="col-md-4">
-              <button class="btn bis"><a href="?c=Supervisor&m=usuarios">Ver Usuarios</a></button>
+              <button class="btn"><a style="color: white; padding-right: 100px;" href="?c=Supervisor&m=usuarios">Ver Usuarios</a></button>
             </div>
             <div class="col-md-4">
-              <button class="btn bis"><a href="?c=Supervisor&m=incapacidades">Ver Incapacidades</a></button>
+              <button class="btn"><a style="color: white; padding-right: 100px;" href="?c=Supervisor&m=incapacidades">Ver Incapacidades</a></button>
             </div>
             <div class="col-md-4">
               <button class="btn bis"><a href="?c=Contrato&m=IndexScontrato">Ver contratos</a></button>
+
             </div>
           </div>
         </div>
