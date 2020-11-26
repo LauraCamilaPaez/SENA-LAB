@@ -1,18 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>Certificado_laboral</title>
     <style>
-        #cuadro{
+        #cuadro {
             position: absolute;
         }
     </style>
 </head>
+
 <body>
-    
+
     <?php
-        $usuario = $_SESSION['id_usuario'];        
+    $usuario = $_SESSION['id_usuario'];
     ?>
 
     <div id="cuadro">
@@ -28,11 +30,11 @@
         </p>
 
         <p>
-        Certificación que se expide por solicitud de la parte interesada en Bogotá, a los 9 días del mes de Octubre del 2020.
+            Certificación que se expide por solicitud de la parte interesada en Bogotá, a los 9 días del mes de Octubre del 2020.
         </p>
 
         <p>
-        Atento y Cordial.
+            Atento y Cordial.
         </p>
 
         <p>Gabriel Garcia Marquez </p>
@@ -40,4 +42,5 @@
     </div>
 
 </body>
+
 </html>

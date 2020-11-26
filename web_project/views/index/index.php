@@ -1,21 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/all/css/style.css">
+    <link rel="shortcut icon" href="assets/img/sena.png">
     <title>Sena-lab</title>
 </head>
+
 <body>
+
 
     <header class="header-nav">
                                 <div class="container-nav">
-                                    <a href=""><img src="assets/img/logo-sena.png" alt="Logo Sena" class="logo"></a>
+                                    <a href=""><img src="assets/img/logosena.png" alt="Logo Sena" class="logo"></a>
                                     <nav>
                                         <ul>
-                                            <li><a href="?c=Usuarios&m=index">SenaLAB</a></li>
-                                            <li><a href="?c=Usuarios&m=index">Inicio</a></li>
+                                            <li><a href="?c=Index&m=index">SenaLAB</a></li>
+                                            <li><a href="#">Inicio</a></li>
                                             <li><a href="">Contactanos</a></li>
                                             <li><a href="?c=Login&m=index">Ingresar</a></li>
                                         </ul>
@@ -52,42 +56,43 @@
                 <div class="carousel-caption d-none d-md-block">
                     <h5>Orientación ocupacional. </h5>
                 </div>
+                <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                </a>
             </div>
-            </div>
-            <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="sr-only">Previous</span>
-            </a>
-            <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="sr-only">Next</span>
-            </a>
-        </div>
-    </section>
+        </section>
 
-    
-    <div class="espacio-2">    
-        <h4>Lorem ipsum dolor sit amet consectetur</h4>
-        <br><br>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi magnam iusto, nulla omnis aperiam sequi odio, distinctio eum numquam neque molestias nostrum? Sequi eveniet temporibus deserunt voluptatum modi repudiandae cum.</p>
-            <img src="assets/img/naranja.png" alt="" class="espacio-2 img-fluid img-thumbnail mx-auto d-block">        
+
+        <div id="navbar-example">
+            <ul class="nav nav-tabs" role="tablist">
+
+            </ul>
+        </div>
+        
+        <?php
+        /*=============================================
+        FOOTER
+        =============================================*/
+
+        include "views/footer/footer.php";
+
+        echo '</div>';
+        ?>
+
     </div>
 
 
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 
-
-    <footer class="text-center p-3 mb-2 bg-light text-white bg-dark"  >
-
-        <p>Todos los derechos reservados a Sena-lab</p>
-        <p class=" "> Copyright © 2020 </p>
-                
-    </footer>
-
-</div>
-
-
-<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" ></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 </body>
+
+
+
 </html>
