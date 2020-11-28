@@ -15,13 +15,9 @@ class SupervisorController extends Supervisor{
 		require_once('views/supervisor/index_supervisor_incapacidades.php');
 	}
 
-	
-
-	//public function contrato(){
-	//	require_once('views/supervisor/index_supervisor_contrato.php');
-	//}
-    
-		
+	public function contratos(){
+		require_once('views/supervisor/index_supervisor_contratos.php');
+	}
 
     public function store(){
 

@@ -53,12 +53,11 @@ class IncapacidadesController extends Incapacidad
         header("location:?c=Usuarios&m=index");
 
         parent::insertar(
-            $_POST['nombre'],
-            $_POST['telefono'],
-            $_POST['correo'],
-            $_POST['mensaje'],
-            $route_pdf
-
+                $_POST['nombre'],
+                $_POST['telefono'],
+                $_POST['correo'],           
+                $_POST['mensaje'],
+                $route_pdf
         );
     }
     //Crete old

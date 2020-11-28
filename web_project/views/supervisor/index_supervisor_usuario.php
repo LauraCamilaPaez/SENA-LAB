@@ -24,6 +24,23 @@
             </nav>
         </div>
     </header>
+<div class="container">
+    <div class="row">
+        <div class="col-md-12 mt-5">
+            <table class="table">
+                <thead class="thead-dark">
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Cargo</th>
+                        <th scope="col">Nombres</th>
+                        <th scope="col">Apellidos</th>
+                        <th scope="col">Correo</th>
+                        <th scope="col">Tipo_documento</th>
+                        <th scope="col">Numero_documento</th>
+                        <th scope="col">contrato</th>
+
+                    </tr>
+                </thead>
 
     <div class="container">
         <div class="row">
@@ -49,21 +66,25 @@
                         $i++;
                     ?>
 
-                        <tbody>
-                            <tr>
-                                <th scope="row"><?php echo $r->id_usuario ?></th>
-                                <td><?php echo $r->rol ?></td>
-                                <td><?php echo $r->nombre ?></td>
-                                <td><?php echo $r->apellido ?></td>
-                                <td><?php echo $r->documento ?></td>
-                                <td><?php echo $r->correo ?></td>
-                                <td><?php echo $r->tipo_documento ?></td>
-                                
-                            </tr>
-                        </tbody>
-                    <?php } ?>
-                </table>
-            </div>
+
+                <tbody>
+                    <tr>
+                        <th scope="row"><?php echo $r->id_usuario ?></th>
+                        <td><?php echo $r->rol ?></td>
+                        <td><?php echo $r->nombre ?></td>
+                        <td><?php echo $r->apellido ?></td>
+                        <td><?php echo $r->correo ?></td>
+                        <td><?php echo $r->tipo_documento ?></td>
+                        <td><?php echo $r->documento ?></td>
+                        <td>
+                            <div class="btn-group" role="group" aria-label="Basic example">
+                                <a href="?c=Contrato&m=IndexScontrato" class="btn-success btn-sm">ver</a>
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+                <?php } ?>
+            </table>
         </div>
     </div>
 

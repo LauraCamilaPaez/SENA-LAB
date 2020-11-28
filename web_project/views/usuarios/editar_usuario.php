@@ -13,6 +13,52 @@
 </head>
 
 <body>
+<header class="header-nav">
+    <div class="container-nav">
+        <a href=""><img src="assets/img/logosena.png" alt="Logo Sena" class="logo"></a>
+        <nav>
+            <ul>
+                <li><a href="?c=Index&m=index">SenaLAB</a></li>
+                <li><a href="?c=Admin&m=index">Inicio</a></li>
+                <li><a href="">Contactanos</a></li>
+                <li><a href="?c=Login&m=destroy">Salir</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+
+
+<div class="wrapper">
+
+    <div class="title">
+
+        Formulario de Registro
+
+    </div>
+
+    <form class="form" action="?c=Admin&m=update" method="post">
+
+        <?php
+        $id = $_REQUEST['id'];
+        $r = parent::request();
+        ?>
+
+        <input type="hidden" value="<?php echo $id ?>" name="id_usuario" class="form-control" readonly >
+
+        <?php foreach($r as $a){
+            if($id == $a->id_usuario){
+                ?>
+
+                <div class="inputfield">
+
+                    <label>Nombres</label>
+                    <input type="text" name="nombre" class="input" value="<?php echo $a->nombre ?>" required>
+
+                </div>
+
+
+<body>
     <header class="header-nav">
         <div class="container-nav">
             <a href=""><img src="assets/img/logosena.png" alt="Logo Sena" class="logo"></a>
@@ -92,9 +138,24 @@
 
                             <select name="fk_rol">
                                 <option value="">Seleccionar Cargo</option>
-
-
                         </div>
+                <div class="inputfield">
+                    <label >Tipo_documento</label>
+
+                    <div class="custom_select">
+                            <select name="fk_tipo_documento" >
+
+                                <option value="">Seleccionar Cargo</option>
+
+                                <?php foreach(parent::consultarTipoDocumento() as $r) { ?>
+                                    <option value="<?php echo $r->id_tipo_documento ?>"><?php echo $r->tipo_documento ?></option>
+                                <?php } ?>
+
+                            </select>
+                    </div>
+
+                </div>
+            <?php }  } ?>
 
                         <div class="inputfield">
                             <label>Tipo_documento</label>

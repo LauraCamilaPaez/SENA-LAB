@@ -14,13 +14,9 @@ class Admin extends DB{
         }
     }
 
-    /*=============================================
-	INSERTAR USUARIOS
-	=============================================*/
-
-    public function insertar($fk_rol, $nombre, $apellido, $correo, $password_user,  $fk_tipo_documento, $documento, $fk_tipo_contrato){
+    public function insertar($fk_rol, $nombre, $apellido, $correo, $password_user,  $fk_tipo_documento, $documento){
         try{
-            $stm = parent::connect()->prepare("INSERT INTO usuario(fk_rol ,nombre,apellido,correo,password_user,fk_tipo_documento,documento,fk_tipo_contrato) VALUES ('$fk_rol', '$nombre', '$apellido', '$correo', '$password_user',  '$fk_tipo_documento', '$documento', '$fk_tipo_contrato') ");
+            $stm = parent::connect()->prepare("INSERT INTO usuario(fk_rol ,nombre,apellido,correo,password_user,fk_tipo_documento,documento) VALUES ('$fk_rol', '$nombre', '$apellido', '$correo', '$password_user',  '$fk_tipo_documento', '$documento') ");
             $stm->execute();
         }catch(Exception $e){
             die($e->getMessage());
@@ -41,15 +37,9 @@ class Admin extends DB{
         }
     }
 
-      /*=============================================
-	ACTUALIZAR USUARIOS
-	=============================================*/
-
-    /*public function actualizar($fk_rol,$nombre,$apellido,$correo,$password_user,$tipo_documento,$documento, $id){*/
-        public function actualizar($fk_tipo_documento, $fk_rol,$nombre,$apellido,$correo,$password_user,$documento, $id){
+    public function actualizar($fk_rol, $fk_tipo_documento,$nombre,$apellido,$correo,$password_user,$documento, $id){
         try{
-            /*$stm = parent::connect()->prepare("UPDATE usuario SET fk_rol='$fk_rol', nombre='$nombre', apellido='$apellido', correo='$correo', password_user='$password_user', tipo_documento='$tipo_documento', documento='$documento'  WHERE id_usuario=$id");*/
-            $stm = parent::connect()->prepare("UPDATE usuario SET fk_tipo_documento='$fk_tipo_documento',fk_rol='$fk_rol', nombre='$nombre', apellido='$apellido', correo='$correo', password_user='$password_user', documento='$documento'  WHERE id_usuario=$id");
+            $stm = parent::connect()->prepare("UPDATE usuario SET fk_rol='$fk_rol', fk_tipo_documento='$fk_tipo_documento', nombre='$nombre', apellido='$apellido', correo='$correo', password_user='$password_user',  documento='$documento'  WHERE id_usuario=$id");
             $stm->execute();
         }catch(Exception $e){
             die($e->getMessage());
@@ -58,7 +48,7 @@ class Admin extends DB{
 
     public function requestEmail($email, $password){
         try{
-            $stm = parent::connect()->prepare('SELECT * FROM usuario WHERE correo = ? AND password_user = ? ');
+            $stm = parent::connect()->prepare('SELECT u.*, r.rol FROM `usuario` u LEFT JOIN rol r ON r.id_rol=u.fk_rol WHERE correo = ? AND password_user = ? ');
             $stm->bindParam(1,$email,PDO::PARAM_STR);
             $stm->bindParam(2,$password,PDO::PARAM_STR);
             $stm->execute();
@@ -77,7 +67,7 @@ class Admin extends DB{
         }
     }
 
-    public function consultartipo_documento(){
+    public function consultarTipoDocumento(){
         try{
             $stm = parent::connect()->prepare("SELECT * FROM tipo_documento");
             $stm->execute();
@@ -86,6 +76,8 @@ class Admin extends DB{
             die($e->getMessage());
         }
     }
+
+    
 
     public function consultartipo_contrato(){
         try{

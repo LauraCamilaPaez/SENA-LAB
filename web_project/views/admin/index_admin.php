@@ -54,7 +54,7 @@
                     <p class="font-weight-bold m-0">Email</p>
                     <td><?php echo $usuario->correo ?></td>
                     <p class="font-weight-bold m-0">Rol</p>
-                    <td><?php echo $usuario->fk_rol ?></td>
+                    <td><?=ucwords($usuario->rol) ?></td>
                 </div>
             </div>
         </div>
@@ -75,25 +75,14 @@
                     <div class="btn-group">
                         <a href="?c=Certificados&m=index" type="button" class="btn btn-info " aria-haspopup="true" aria-expanded="false">Certificados</a>
                     </div>
-
-                    <div class="btn-group">
-                        <a href="?c=Contrato&m=index" type="button" class="btn btn-info " aria-haspopup="true" aria-expanded="false">Contrato</a>
-
-                    </div>
-                </div>
-            </div>
+        <div class="btn-group espaciobutton">
+            <a href="?c=Contrato&m=IndexContrato" type="button" class="btn btn-info "  aria-haspopup="true" aria-expanded="false">Contratos</a>
         </div>
-        <!--/div-->
-    </section>
-    <?php
-    /*=============================================
-        FOOTER
-        =============================================*/
 
-    include "views/footer/footer.php";
-
-    echo '</div>';
-    ?>
+        <div class="btn-group espaciobutton">
+            <a href="?c=Certificados&m=index" type="button" class="btn btn-info "  aria-haspopup="true" aria-expanded="false">Certificados</a>
+        </div>
+    </div>
 
 
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>

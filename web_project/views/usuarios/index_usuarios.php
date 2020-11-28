@@ -12,21 +12,52 @@
 </head>
 
 <body>
-    <header class="header-nav">
-        <div class="container-nav">
-            <a href=""><img src="assets/img/logosena.png" alt="Logo Sena" class="logo"></a>
-            <nav>
-                <ul>
-                    <li><a class="nav-link disabled" href="#"> SenaLAB</a></li>
-                    <li><a href="?c=index&m=usuarios">Inicio</a></li>
-                    <li><a href="">Contactanos</a></li>
-                    <li><a href="?c=Login&m=destroy">Salir</a></li>
-                </ul>
-            </nav>
+        <header class="header-nav">
+                            <div class="container-nav">
+                                <a href=""><img src="assets/img/logosena.png" alt="Logo Sena" class="logo"></a>
+                                <nav>
+                                    <ul>
+                                        <!--li><a href="?c=Index&m=index">SenaLAB</a></li-->
+                                        <li><a href="?c=Admin&m=index">Inicio</a></li>
+                                        <li><a href="">Contactanos</a></li>
+                                        <li><a href="?c=Login&m=destroy">Salir</a></li>
+                                    </ul>
+                                </nav>
+                            </div>
+                </header>
+    <?php
+    $usuario = $_SESSION['id_usuario'];
+    ?>
+
+    <section >
+        <div class="col-9 py-3 mx-auto  ">
+            <div class="card border-success">
+                <div style="background: #ffd800;" class="card-header text-white text-center  pb-4">
+                    Página principal usuario
+                </div>
+                <div class="card-body esdiv">
+                    <p class="font-weight-bold m-0">Nombre</p>
+                    <td><?php echo ucwords($usuario->nombre) ?></td>
+                    <p class="font-weight-bold m-0">Apellido</p>
+                    <td><?php echo ucwords($usuario->apellido) ?>    </td>
+                    <p class="font-weight-bold m-0">Email</p>
+                    <td><?php echo ucwords($usuario->correo) ?></td>
+                    <p class="font-weight-bold m-0">Rol</p>
+                    <td><?php echo ucwords($usuario->rol) ?></td>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+      
+    <div class="d-flex  justify-content-around mar mx-auto">
+        <div class="btn-group">
+            <a href="?c=usuarios&m=inc" type="button" class="btn " style="width: 240px; height: 40px;"   aria-haspopup="true" aria-expanded="false">Enviar Incapacidad</a>
         </div>
     </header>
 
-
+<!-- Diego -->
     <head>
         <div class="jumbotron">
             <?php $usuario = $_SESSION['id_usuario'] ?>
@@ -36,6 +67,10 @@
             <p>Tenga presente que al enviar su incapacidad debe ser en archivo PDF</p>
         </div>
     </head>
+    <!-- Diego -->
+        <div class="btn-group espaciobutton">
+            <a href="?c=Contrato&m=IndexUContrato" type="button" class="btn btn-info "  aria-haspopup="true" aria-expanded="false">Contrato</a>
+        </div>
 
     <div div class="btn-group-justifique">
 

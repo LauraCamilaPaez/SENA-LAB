@@ -36,25 +36,20 @@
       <hr class="my-4">
       <p>Puedes entrar a este apartado en cualquier momento.</p>
     </div>
-  </head>
+  </head>    
+      <section>
+        <div class="container">
+          <div class="row">
+            <div class="col-md-4">
+              <button class="btn"><a style="color: white; padding-right: 100px;" href="?c=Supervisor&m=usuarios">Ver Usuarios</a></button>
+            </div>
+            <div class="col-md-4">
+              <button class="btn"><a style="color: white; padding-right: 100px;" href="?c=Supervisor&m=incapacidades">Ver Incapacidades</a></button>
+            </div>
+            <div class="col-md-4">
+              <button class="btn bis"><a href="?c=Contrato&m=IndexScontrato">Ver contratos</a></button>
 
-  <section>
-    <div class="container">
-      <div class="row">
-        <div class="btn-group-justifique">
-
-          <div class="btn-group">
-            <!--button class="btn bis"><a href="?c=Supervisor&m=usuarios">Ver Usuarios</a></button-->
-            <a href="?c=Supervisor&m=usuarios" type="button" class="btn btn-info " aria-haspopup="true" aria-expanded="false">Ver Usuarios</a>
-          </div>
-
-          <div class="btn-group">
-            <!--button class="btn bis"><a href="?c=Supervisor&m=incapacidades">Ver Incapacidades</a></button-->
-            <a href="?c=Supervisor&m=incapacidades" type="button" class="btn btn-info " aria-haspopup="true" aria-expanded="false">Ver Incapacidades</a>
-          </div>
-
-          <div class="btn-group">
-            <a href="#" type="button" class="btn btn-info " aria-haspopup="true" aria-expanded="false">Ver Certificados</a>
+            </div>
           </div>
           <div class="btn-group">
             <a href="#" type="button" class="btn btn-info " aria-haspopup="true" aria-expanded="false">Contrato</a>
@@ -73,8 +68,8 @@
 
   include "views/footer/footer.php";
 
-  echo '</div>';
   ?>
+  
 
   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
