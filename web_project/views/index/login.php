@@ -11,7 +11,7 @@
     <script src="https://kit.fontawesome.com/a81368914c.js"></script>
     <title>inicio de Sesión</title>
 </head>
-
+ 
 <body>
 
     <header class="header-nav">
@@ -21,7 +21,7 @@
                 <ul>
                     <li><a href="index.php">SenaLAB</a></li>
                     <li><a href="index.php">Inicio</a></li>
-                    <li><a href="">Contactanos</a></li>
+                    <li><a href="?c=Contacto&m=index">Contactanos</a></li>
                     <li><a href="?c=Login&m=index">Ingresar</a></li>
                 </ul>
             </nav>
