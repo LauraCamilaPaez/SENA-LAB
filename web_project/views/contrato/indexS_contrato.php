@@ -48,7 +48,7 @@
                     <tbody>
                     <tr>
                         <th scope="row" style="visibility: hidden"><?php echo $r->id_contrato ?></th>
-                        <td><?php echo $r->fk_tipo_contrato ?></td>
+                        <td><?php echo $r->tipo_contrato ?></td>
                         <td><?php echo $r->nombre ?></td>
                         <td><?php echo $r->apellido ?></td>
                         <td><?php echo $r->correo ?></td>

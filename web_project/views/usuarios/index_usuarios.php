@@ -51,7 +51,7 @@
       
     <div class="d-flex  justify-content-around mar mx-auto">
         <div class="btn-group">
-            <a href="?m=envio&c=Incapacidades&id=" type="button" class="btn " style="width: 240px; height: 40px;"   aria-haspopup="true" aria-expanded="false">Enviar Incapacidad</a>
+            <a href="?c=usuarios&m=inc" type="button" class="btn " style="width: 240px; height: 40px;"   aria-haspopup="true" aria-expanded="false">Enviar Incapacidad</a>
         </div>
 
             <div class="dropdown-menu">
@@ -63,9 +63,6 @@
 
         <div class="btn-group espaciobutton">
             <a href="?c=Contrato&m=IndexUContrato" type="button" class="btn btn-info "  aria-haspopup="true" aria-expanded="false">Contrato</a>
-        </div>
-    <div class="btn-group">    
-            <a href="?c=usuarios&m=inc" type="button" class="btn btn-info "  aria-haspopup="true" aria-expanded="false">incapacidades</a>      
         </div>
 
 

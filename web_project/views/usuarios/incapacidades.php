@@ -57,7 +57,7 @@
                 </section>
             </section>
             
-            <form action="?c=Incapacidades&m=create" method="POST" class="form_contact">
+            <form action="?c=Incapacidades&m=create" method="POST" enctype = "multipart/form-data" class="form_contact">
             <h2>Envia un mensaje</h2>
             <div class="user_info">
                 <label for="names">Nombres *</label>
@@ -72,12 +72,12 @@
                 <label for="mensaje">Mensaje *</label>
                 <textarea id="mensaje" name="mensaje" require></textarea>
 
-                <label for="pdf">Subir incapacidad</label>
-                <input type="file" class="form-control-file" name="pdf" id="pdf" require>
+                <label class="label-incapacidades" for="form">Subir incapacidad</label>
+                <input type="file" class="form-control-file" name="pdf" id="exampleFormControlFile1" require>
 
                 <input type="submit" value="Enviar Mensaje" id="btnSend">
             </div>
-        </form>
+            </form>
 
         
             

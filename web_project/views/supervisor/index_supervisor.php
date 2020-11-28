@@ -49,7 +49,8 @@
               <button class="btn"><a style="color: white; padding-right: 100px;" href="?c=Supervisor&m=incapacidades">Ver Incapacidades</a></button>
             </div>
             <div class="col-md-4">
-              <button class="btn"><a style="color: white; padding-right: 100px;" href="?c=Supervisor&m=contratos">Ver contratos</a></button>
+              <button class="btn bis"><a href="?c=Contrato&m=IndexScontrato">Ver contratos</a></button>
+
             </div>
           </div>
         </div>
