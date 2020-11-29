@@ -56,6 +56,7 @@
             <a href="?c=usuarios&m=inc" type="button" class="btn " style="width: 240px; height: 40px;"   aria-haspopup="true" aria-expanded="false">Enviar Incapacidad</a>
         </div>
     </header>
+<<<<<<< Updated upstream
 
 <!-- Diego -->
     <head>
@@ -68,6 +69,8 @@
         </div>
     </head>
     <!-- Diego -->
+=======
+>>>>>>> Stashed changes
         <div class="btn-group espaciobutton">
             <a href="?c=Contrato&m=IndexUContrato" type="button" class="btn btn-info "  aria-haspopup="true" aria-expanded="false">Contrato</a>
         </div>
@@ -80,12 +83,17 @@
                 <label class="custom-file-label" for="customFileLang">Seleccione archivo</label>
             </div>
         </div>
+<<<<<<< Updated upstream
 
         <div class="btn-group espaciobutton">
             <a href="?c=Contrato&m=index" type="button" class="btn btn-info " aria-haspopup="true" aria-expanded="false">Contrato</a>
         </div>
         <div class="btn-group">
             <a href="?c=usuarios&m=inc" type="button" class="btn btn-info " aria-haspopup="true" aria-expanded="false">incapacidades</a>
+=======
+        <div class="btn-group">
+            <a href="?c=usuarios&m=inc" type="button" class="btn btn-info " aria-haspopup="true" aria-expanded="false">Incapacidades</a>
+>>>>>>> Stashed changes
         </div>
     </div>
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>

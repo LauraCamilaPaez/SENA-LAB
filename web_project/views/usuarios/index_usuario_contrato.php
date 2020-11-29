@@ -61,7 +61,7 @@
                         <td><?php echo $r->fecha_terminacion ?></td>
                         <td>
                             <div class="btn-group" role="group" aria-label="Basic example">
-                                <a href="?c=Contrato&m=detalles" class="btn-success btn-sm p-2">Ver</a>
+                                <a href="?c=Pdf&m=contrato" class="btn-success btn-sm p-2">Ver</a>
                             </div>
                         </td>
 

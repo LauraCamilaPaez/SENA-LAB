@@ -32,6 +32,7 @@ class Usuario extends DB{
         }
     }
 
+<<<<<<< Updated upstream
     public function consultarTipoDocumento(){
         try{
             $stm = parent::connect()->prepare("SELECT * FROM tipo_documento");
@@ -41,6 +42,8 @@ class Usuario extends DB{
             die($e->getMessage());
         }
     }
+=======
+>>>>>>> Stashed changes
 
 }
 
