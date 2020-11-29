@@ -10,17 +10,17 @@
 </head>
 <body>
 <header class="header-nav">
-    <div class="container-nav">
+      <div class="container-nav">
         <a href=""><img src="assets/img/logosena.png" alt="Logo Sena" class="logo"></a>
         <nav>
-            <ul>
-                <!--li><a href="?c=Index&m=index">SenaLAB</a></li-->
-                <li><a href="?c=Admin&m=index">Inicio</a></li>
-                <li><a href="">Contactanos</a></li>
-                <li><a href="?c=Login&m=destroy">Salir</a></li>
-            </ul>
+          <ul>
+            <li><a href="?c=Supervisor&m=index">Inicio</a></li>
+            <li><a href="#">Contactanos</a></li>
+            <li><a href="?c=Supervisor&m=index"> Regresar</a></li>
+            <li><a href="?c=Login&m=destroy">Salir</a></li>
+          </ul>
         </nav>
-    </div>
+      </div>
 </header>
 <div class="container-tabla-usuarios">
     <div class="row">

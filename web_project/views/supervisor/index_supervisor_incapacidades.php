@@ -15,9 +15,9 @@
         <a href=""><img src="assets/img/logosena.png" alt="Logo Sena" class="logo"></a>
         <nav>
           <ul>
-            <li><a href="?c=Index&m=index"> SenaLAB</a></li>
             <li><a href="?c=Supervisor&m=index">Inicio</a></li>
             <li><a href="#">Contactanos</a></li>
+            <li><a href="?c=Supervisor&m=index"> Regresar</a></li>
             <li><a href="?c=Login&m=destroy">Salir</a></li>
           </ul>
         </nav>

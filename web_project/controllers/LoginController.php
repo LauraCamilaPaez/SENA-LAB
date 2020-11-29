@@ -74,13 +74,13 @@ class LoginController extends Login
 
             switch ($usuario->fk_rol) {
                 case (1):
-                    header('location: ?c=Admin&m=index');
+                    header('location: ?c=Usuarios&m=index');
                     break;
                 case (2):
-                    header('location: ?c=Supervisor&m=index');
+                    header('location: ?c=Admin&m=index');
                     break;
                 case (3):
-                    header('location: ?c=Usuarios&m=index');
+                    header('location: ?c=Supervisor&m=index');
                     break;
                 default:
                     header('location: ?c=Login&m=index&error=error');

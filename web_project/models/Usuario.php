@@ -12,7 +12,6 @@ class Usuario extends DB{
 		}
     }
     
-
 	public function consultarRol(){
         try{
             $stm = parent::connect()->prepare("SELECT * FROM rol");

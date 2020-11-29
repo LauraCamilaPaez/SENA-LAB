@@ -64,7 +64,7 @@
         <div class="btn-group espaciobutton">
             <a href="?c=Contrato&m=index_usuario" type="button" class="btn btn-info "  aria-haspopup="true" aria-expanded="false">Contrato</a>
         </div>
-
+    
 
 
 
