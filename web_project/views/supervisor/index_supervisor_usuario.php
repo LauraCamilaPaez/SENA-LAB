@@ -16,32 +16,15 @@
             <a href=""><img src="assets/img/logosena.png" alt="Logo Sena" class="logo"></a>
             <nav>
                 <ul>
-                    <li><a class="nav-link disabled" href="#">SenaLAB</a></li>
+                    <li><a href="#">SenaLAB</a></li>
                     <li><a href="?c=Supervisor&m=index">Inicio</a></li>
                     <li><a href="#">Contactanos</a></li>
                     <li><a href="?c=Login&m=destroy">Salir</a></li>
                 </ul>
             </nav>
         </div>
+
     </header>
-<div class="container">
-    <div class="row">
-        <div class="col-md-12 mt-5">
-            <table class="table">
-                <thead class="thead-dark">
-                    <tr>
-                        <th scope="col">#</th>
-                        <th scope="col">Cargo</th>
-                        <th scope="col">Nombres</th>
-                        <th scope="col">Apellidos</th>
-                        <th scope="col">Correo</th>
-                        <th scope="col">Tipo_documento</th>
-                        <th scope="col">Numero_documento</th>
-                        <th scope="col">contrato</th>
-
-                    </tr>
-                </thead>
-
     <div class="container">
         <div class="row">
             <div class="col-md-12">
@@ -56,6 +39,7 @@
                             <th scope="col">Numero_documento</th>
                             <th scope="col">Correo</th>
                             <th scope="col">Tipo_documento</th>
+                            <th scope="col"></th>
                             
                         </tr>
                     </thead>

@@ -19,7 +19,7 @@
             <a href=""><img src="assets/img/logosena.png" alt="Logo Sena" class="logo"></a>
             <nav>
                 <ul>
-                    <li><a class="nav-link disabled" href="#"> SenaLAB</a></li>
+                    <li><a style="color:#5EB319 " href="#"> SenaLAB</a></li>
                     <li><a href="?c=Admin&m=index">Inicio</a></li>
                     <li><a href="">Contactanos</a></li>
                     <li><a href="?c=Login&m=destroy">Salir</a></li>
@@ -37,10 +37,9 @@
             <p>Puedes entrar a este apartado en cualquier momento.</p>
         </div>
     </head>
-    <!--div class="container ">
-        <?php/*$usuario = $_SESSION['id_usuario'];*/?></div-->
-
-    <!--section >
+    <section>
+    <div class="container ">
+        <?php $usuario = $_SESSION['id_usuario']; ?></div-->
         <div class="col-9 py-3 mx-auto  ">
             <div class="card border-success">
                 <div style="background: #5EB319;" class="card-header text-white text-center  pb-4">
@@ -58,31 +57,27 @@
                 </div>
             </div>
         </div>
-    </section-->
+    </section>
+    
     <section>
         <div class="container">
-            <div class="row">
+            <div class="d-flex justify-content-center">
                 <div class="btn-group-justifique">
 
                     <div class="btn-group">
-                        <a href="?c=Usuarios&m=usuarios" type="button" class="btn btn-info " aria-haspopup="true" aria-expanded="false">Usuario</a>
+                        <a href="?c=Usuarios&m=usuarios" type="button" class="btn btn-info mr-5 " aria-haspopup="true" aria-expanded="false">Usuario</a>
                     </div>
 
                     <div class="btn-group">
-                        <a href="?m=index&c=Incapacidades" type="button" class="btn btn-info " aria-haspopup="true" aria-expanded="false">Incapacidades</a>
+                        <a href="?m=index&c=Incapacidades" type="button" class="btn btn-info mr-5" aria-haspopup="true" aria-expanded="false">Incapacidades</a>
                     </div>
-
-                    <div class="btn-group">
-                        <a href="?c=Certificados&m=index" type="button" class="btn btn-info " aria-haspopup="true" aria-expanded="false">Certificados</a>
-                    </div>
-        <div class="btn-group espaciobutton">
-            <a href="?c=Contrato&m=IndexContrato" type="button" class="btn btn-info "  aria-haspopup="true" aria-expanded="false">Contratos</a>
+                    <div class="btn-group espaciobutton">
+                        <a href="?c=Contrato&m=IndexContrato" type="button" class="btn btn-info mr-5 "  aria-haspopup="true" aria-expanded="false">Contratos</a>
+                    </div> 
+                </div>
+            </div>
         </div>
-
-        <div class="btn-group espaciobutton">
-            <a href="?c=Certificados&m=index" type="button" class="btn btn-info "  aria-haspopup="true" aria-expanded="false">Certificados</a>
-        </div>
-    </div>
+    </section>
 
 
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>

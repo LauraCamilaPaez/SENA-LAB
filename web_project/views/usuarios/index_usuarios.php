@@ -29,10 +29,20 @@
     $usuario = $_SESSION['id_usuario'];
     ?>
 
+    <head>
+        <div class="jumbotron">
+            <?php $usuario = $_SESSION['id_usuario'] ?>
+            <h1 class="display-4 ">Hola de nuevo, <?php echo $usuario->nombre ?></h1>
+            <p class="lead">En este apartado usted podra ver la relación laboral que tiene con el Servicio Nacional de Aprendizaje <b>SENA.</b></p>
+            <hr class="my-4">
+            <p>Tenga presente que al enviar su incapacidad debe ser en archivo PDF</p>
+        </div>
+    </head>
+
     <section >
         <div class="col-9 py-3 mx-auto  ">
             <div class="card border-success">
-                <div style="background: #ffd800;" class="card-header text-white text-center  pb-4">
+                <div style="background: #F0CC26;" class="card-header text-black text-center  pb-4">
                     Página principal usuario
                 </div>
                 <div class="card-body esdiv">
@@ -53,47 +63,12 @@
       
     <div class="d-flex  justify-content-around mar mx-auto">
         <div class="btn-group">
-            <a href="?c=usuarios&m=inc" type="button" class="btn " style="width: 240px; height: 40px;"   aria-haspopup="true" aria-expanded="false">Enviar Incapacidad</a>
+            <a href="?c=usuarios&m=inc" type="button" class="btn btn-info " style="width: 240px; height: 40px;"   aria-haspopup="true" aria-expanded="false">Enviar Incapacidad</a>
         </div>
     </header>
-<<<<<<< Updated upstream
-
-<!-- Diego -->
-    <head>
-        <div class="jumbotron">
-            <?php $usuario = $_SESSION['id_usuario'] ?>
-            <h1 class="display-4 ">Hola de nuevo, <?php echo $usuario->nombre ?></h1>
-            <p class="lead">En este apartado usted podra ver la relación laboral que tiene con el Servicio Nacional de Aprendizaje <b>SENA.</b></p>
-            <hr class="my-4">
-            <p>Tenga presente que al enviar su incapacidad debe ser en archivo PDF</p>
-        </div>
-    </head>
-    <!-- Diego -->
-=======
->>>>>>> Stashed changes
-        <div class="btn-group espaciobutton">
-            <a href="?c=Contrato&m=IndexUContrato" type="button" class="btn btn-info "  aria-haspopup="true" aria-expanded="false">Contrato</a>
-        </div>
-
     <div div class="btn-group-justifique">
-
-        <div class="dropdown-menu">
-            <div class="custom-file">
-                <input type="file" class="custom-file-input" id="customFileLang" lang="en">
-                <label class="custom-file-label" for="customFileLang">Seleccione archivo</label>
-            </div>
-        </div>
-<<<<<<< Updated upstream
-
         <div class="btn-group espaciobutton">
-            <a href="?c=Contrato&m=index" type="button" class="btn btn-info " aria-haspopup="true" aria-expanded="false">Contrato</a>
-        </div>
-        <div class="btn-group">
-            <a href="?c=usuarios&m=inc" type="button" class="btn btn-info " aria-haspopup="true" aria-expanded="false">incapacidades</a>
-=======
-        <div class="btn-group">
-            <a href="?c=usuarios&m=inc" type="button" class="btn btn-info " aria-haspopup="true" aria-expanded="false">Incapacidades</a>
->>>>>>> Stashed changes
+            <a href="?c=Contrato&m=IndexUContrato" type="button" class="btn btn-info " aria-haspopup="true" aria-expanded="false">Listar Contratos y Ver en PDF</a>
         </div>
     </div>
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>

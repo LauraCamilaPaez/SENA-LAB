@@ -31,20 +31,6 @@ class Usuario extends DB{
             die($e->getMessage());
         }
     }
-
-<<<<<<< Updated upstream
-    public function consultarTipoDocumento(){
-        try{
-            $stm = parent::connect()->prepare("SELECT * FROM tipo_documento");
-            $stm->execute();
-            return $stm->fetchAll(PDO::FETCH_OBJ);
-        }catch(Exception $e){
-            die($e->getMessage());
-        }
-    }
-=======
->>>>>>> Stashed changes
-
 }
 
 

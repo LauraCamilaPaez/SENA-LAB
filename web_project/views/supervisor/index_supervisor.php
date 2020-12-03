@@ -17,7 +17,7 @@
     <a href=""><img src="assets/img/logosena.png" alt="Logo Sena" class="logo"></a>
     <nav>
       <ul>
-        <li><a class="nav-link disabled" href="#"> SenaLAB</a></li>
+        <li><a style="color:dimgrey;" href="#"> SenaLAB</a></li>
         <li><a href="?c=Supervisor&m=index">Inicio</a></li>
         <li><a href="#">Contactanos</a></li>
         <li><a href="?c=Login&m=destroy">Salir</a></li>
@@ -47,12 +47,9 @@
               <button class="btn"><a style="color: white; padding-right: 100px;" href="?c=Supervisor&m=incapacidades">Ver Incapacidades</a></button>
             </div>
             <div class="col-md-4">
-              <button class="btn bis"><a href="?c=Contrato&m=IndexScontrato">Ver contratos</a></button>
+              <button class="btn bis"><a style="color: white; padding-right: 100px;" href="?c=Contrato&m=IndexScontrato">Ver contratos</a></button>
 
             </div>
-          </div>
-          <div class="btn-group">
-            <a href="#" type="button" class="btn btn-info " aria-haspopup="true" aria-expanded="false">Contrato</a>
           </div>
 
         </div>
