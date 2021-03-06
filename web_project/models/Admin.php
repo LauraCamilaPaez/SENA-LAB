@@ -4,7 +4,7 @@ class Admin extends DB{
 
     public function consultar(){
         try{
-            $stm=parent::connect()->prepare("SELECT id_usuario, fk_rol, nombre, apellido, correo, password_user , tipo_documento, documento");
+            $stm=parent::connect()->prepare("SELECT id_usuario, fk_rol, nombre, apellido, correo, password_user , fk_tipo_documento, documento");
             $stm->execute();
             return $stm->fetchAll(PDO::FETCH_OBJ);
         }catch(Exception $e){
@@ -12,9 +12,9 @@ class Admin extends DB{
         }
     }
 
-    public function insertar($fk_rol, $nombre, $apellido, $correo, $password_user,  $tipo_documento, $documento){
+    public function insertar($fk_rol, $nombre, $apellido, $correo, $password_user,  $fk_tipo_documento, $documento){
         try{
-            $stm = parent::connect()->prepare("INSERT INTO usuario(fk_rol ,nombre,apellido,correo,password_user,tipo_documento,documento) VALUES ('$fk_rol', '$nombre', '$apellido', '$correo', '$password_user',  '$tipo_documento', '$documento') ");
+            $stm = parent::connect()->prepare("INSERT INTO usuario(fk_rol ,nombre,apellido,correo,password_user,fk_tipo_documento,documento) VALUES ('$fk_rol', '$nombre', '$apellido', '$correo', '$password_user',  '$fk_tipo_documento', '$documento') ");
             $stm->execute();
         }catch(Exception $e){
             die($e->getMessage());
@@ -23,17 +23,17 @@ class Admin extends DB{
 
     public function destroyDato($UsuarioID){
         try{
-          $stm=parent::connect()->prepare("DELETE FROM usuario WHERE id_usuario = ?");
-          $stm->bindParam(1,$UsuarioID,PDO::PARAM_INT);
-          $stm->execute();
+            $stm=parent::connect()->prepare("DELETE FROM usuario WHERE id_usuario = ?");
+            $stm->bindParam(1,$UsuarioID,PDO::PARAM_INT);
+            $stm->execute();
         }catch(Exception $e){
-           die($e->getMessage());
+            die($e->getMessage());
         }
     }
 
-    public function actualizar($fk_rol,$nombre,$apellido,$correo,$password_user,$tipo_documento,$documento, $id){
+    public function actualizar($fk_rol, $fk_tipo_documento,$nombre,$apellido,$correo,$password_user,$documento, $id){
         try{
-            $stm = parent::connect()->prepare("UPDATE usuario SET fk_rol='$fk_rol', nombre='$nombre', apellido='$apellido', correo='$correo', password_user='$password_user', tipo_documento='$tipo_documento', documento='$documento'  WHERE id_usuario=$id");
+            $stm = parent::connect()->prepare("UPDATE usuario SET fk_rol='$fk_rol', fk_tipo_documento='$fk_tipo_documento', nombre='$nombre', apellido='$apellido', correo='$correo', password_user='$password_user',  documento='$documento'  WHERE id_usuario=$id");
             $stm->execute();
         }catch(Exception $e){
             die($e->getMessage());
@@ -61,6 +61,28 @@ class Admin extends DB{
         }
     }
 
+    public function consultarTipoDocumento(){
+        try{
+            $stm = parent::connect()->prepare("SELECT * FROM tipo_documento");
+            $stm->execute();
+            return $stm->fetchAll(PDO::FETCH_OBJ);
+        }catch(Exception $e){
+            die($e->getMessage());
+        }
+    }
+
+    
+
+    public function consultartipo_contrato(){
+        try{
+            $stm = parent::connect()->prepare("SELECT * FROM tipo_contrato");
+            $stm->execute();
+            return $stm->fetchAll(PDO::FETCH_OBJ);
+        }catch(Exception $e){
+            die($e->getMessage());
+        }
+    }
+
     public function consultraId($id){
         try{
             $stm = parent::connect()->prepare('SELECT * FROM usuario  WHERE id_usuario = $id');
@@ -71,6 +93,14 @@ class Admin extends DB{
         }
     }
 
-}
+    public function request(){
+		try{
+			$stm=parent::connect()->prepare("SELECT * FROM usuario INNER JOIN rol ON usuario.fk_rol = rol.id_rol INNER JOIN tipo_documento ON usuario.fk_tipo_documento = tipo_documento.id_tipo_documento");
+			$stm->execute();
+			return $stm->fetchALL(PDO::FETCH_OBJ);
+		}catch(Exception $e){
+			die($e->getMessage());
+		}
+	}
 
-?>
+}
