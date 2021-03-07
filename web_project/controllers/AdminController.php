@@ -34,7 +34,7 @@ class AdminController extends Admin{
 		$tipo_documento = $_POST['tipo_documento'];
 		$documento = $_POST['documento'];
         parent::actualizar($fk_rol, $nombre, $apellido, $correo, $password_user,  $tipo_documento, $documento, $id );
-        header('location:?c=Usuarios&m=editar');
+        header('location:?c=Admin&m=index');
       }
 
 

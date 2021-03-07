@@ -65,7 +65,7 @@
             <label>Tipo de Documento</label>
         
             <div class="custom_select">
-                <select  name="tipo_documento">
+                <select  name="tipo_documento" required>
                     <option value="<?php echo $a->tipo_documento ?>" >Seleccionar Tipo de Documento</option>
                     <option value="cedula de ciudadania" >Cédula de Ciudadanía</option>
                     <option value="cedula de extranjeria">Cédula de Extranjería</option>
@@ -92,9 +92,9 @@
             <label>Cargo</label>
             
             <div class="custom_select">
-                <select name="fk_rol" >
+                <select name="fk_rol" required >
                 
-                    <option value="">Seleccionar Cargo</option>
+                    <option value="">Seleccionar Cargo</option >
                         
                     <?php foreach(parent::consultarRol() as $r) { ?>
                         <option value="<?php echo $r->id_rol ?>"><?php echo $r->rol ?></option>
